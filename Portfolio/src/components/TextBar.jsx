@@ -14,7 +14,7 @@ const shadowClasses = {
   bottom_right_green: "shadow-bottom_right_green",
 };
 
-export default function TextBar({ text, shadow }) {
+export default function TextBar({ text, shadow, extra }) {
   const shadowClass = shadowClasses[shadow];
   const bgColorClass = shadow.includes("purple")
     ? backgroundClasses.green
@@ -22,9 +22,9 @@ export default function TextBar({ text, shadow }) {
 
   return (
     <div
-      className={`${bgColorClass} ${shadowClass} w-fit font-black text-[60px] py-27 px-14 font-poppins tracking-[20px]`}
+      className={`${bgColorClass} ${shadowClass} h-[125px] items-center w-fit font-black text-[60px] py-27 px-14 font-poppins tracking-[20px] ${extra}`}
     >
-      {text}
+      <p className="h-full flex items-center">{text}</p>
     </div>
   );
 }
