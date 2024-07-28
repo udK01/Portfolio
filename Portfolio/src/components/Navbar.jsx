@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
   const menuItems = ["About Me", "Stack", "Projects", "Experiences", "Contact"];
+  const [highlight, setHighlight] = useState(0);
 
   return (
     <div className="flex fixed bg-primary_gray h-[117px] items-center w-full">
@@ -10,7 +11,9 @@ export default function Navbar() {
         {menuItems.map((item, index) => (
           <p
             key={index}
-            className="hover:cursor-pointer hover:text-primary_green transition-all duration-300"
+            className={`hover:cursor-pointer hover:text-primary_green  transition-all duration-300 ${
+              highlight === index && `text-primary_green`
+            }`}
           >
             {item}
           </p>
