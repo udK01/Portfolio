@@ -1,4 +1,4 @@
-import TextBar from "./components/TextBar";
+import TextBar from "./TextBar";
 
 export default function Hero() {
   return (
