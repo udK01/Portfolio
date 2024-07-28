@@ -8,17 +8,23 @@ export default function Hero() {
           <TextBar
             text={"DOMINIK"}
             shadow={"bottom_right_purple"}
-            extra={"mr-[200px]"}
+            direction={"left"}
+            extra={"-translate-x-[150px]"}
           />
         </div>
         <div>
-          <TextBar text={"MURANYI"} shadow={"bottom_right_green"} />
+          <TextBar
+            text={"MURANYI"}
+            shadow={"bottom_right_green"}
+            direction={"right"}
+          />
         </div>
         <div>
           <TextBar
             text={"DEVELOPER"}
             shadow={"bottom_left_purple"}
-            extra={"mr-[200px]"}
+            direction={"left"}
+            extra={"-translate-x-[125px]"}
           />
         </div>
       </div>
