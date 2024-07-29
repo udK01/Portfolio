@@ -4,6 +4,7 @@
   }
   to {
     clip-path: circle(100% at 50% 50%);
+    opacity: 1;
   }
 }
 
