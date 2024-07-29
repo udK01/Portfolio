@@ -3,29 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@keyframes expandLeft {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(-20% -20% -20% -20%);
-  }
-}
-
-@keyframes expandRight {
-  from {
-    clip-path: inset(0 0 0 100%);
-  }
-  to {
-    clip-path: inset(-20% -20% -20% -20%);
-  }
-}
-
-.animate_text_left {
-  animation: expandLeft 1.25s ease-in-out forwards;
-}
-
-.animate_text_right {
-  animation: expandRight 1.25s ease-in-out forwards;
-}

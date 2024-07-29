@@ -1,0 +1,12 @@
+@keyframes sidebar {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-move {
+  animation: sidebar 1s linear forwards;
+}

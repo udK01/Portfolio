@@ -1,0 +1,12 @@
+@keyframes navbar {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar-move {
+  animation: navbar 1s linear forwards;
+}

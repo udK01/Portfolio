@@ -1,5 +1,7 @@
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 
+import "./utils/sidebar.css";
+
 export default function SideBar() {
   const elements = [
     {
@@ -24,7 +26,7 @@ export default function SideBar() {
 
   return (
     <div className="absolute h-screen flex items-center">
-      <div className="fixed w-[80px] h-[250px] bg-[#242020] space-y-[30px] flex flex-col justify-center rounded-r-[45px]">
+      <div className="fixed w-[80px] h-[250px] bg-[#242020] space-y-[30px] flex flex-col justify-center rounded-r-[45px] sidebar-move">
         {elements.map((element, index) => (
           <a
             key={index}
