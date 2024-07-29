@@ -29,12 +29,15 @@ export default function TextBar({ text, shadow, direction, extra }) {
         const { target } = entry;
 
         if (entry.isIntersecting) {
-          if (direction === "left") {
-            target.classList.add("animate_text_left");
-            target.classList.remove("animate_text_right");
-          } else if (direction === "right") {
-            target.classList.add("animate_text_right");
-            target.classList.remove("animate_text_left");
+          switch (direction) {
+            case "left":
+              target.classList.add("animate_text_left");
+              target.classList.remove("animate_text_right");
+              break;
+            case "right":
+              target.classList.add("animate_text_right");
+              target.classList.remove("animate_text_left");
+              break;
           }
         }
       });

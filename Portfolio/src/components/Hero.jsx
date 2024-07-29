@@ -17,28 +17,46 @@ export default function Hero() {
             className="w-[85%] h-[85%] absolute"
           />
         </div>
-        <div>
+        <div className="flex">
           <TextBar
-            text={"DOMINIK"}
-            shadow={"bottom_right_purple"}
+            text={"DOM"}
+            shadow={"top_left_purple"}
             direction={"left"}
-            extra={"-translate-x-[50px]"}
+            extra={"-translate-x-[50px] z-10 pr-0"}
+          />
+          <TextBar
+            text={"INIK"}
+            shadow={"top_left_purple"}
+            direction={"right"}
+            extra={"-translate-x-[50px] pl-0"}
           />
         </div>
-        <div>
+        <div className="flex">
           <TextBar
-            text={"MURANYI"}
+            text={"MUR"}
+            shadow={"bottom_right_green"}
+            direction={"left"}
+            extra={"translate-x-[25px] z-10 shadow-none pr-0"}
+          />
+          <TextBar
+            text={"ANYI"}
             shadow={"bottom_right_green"}
             direction={"right"}
-            extra={"translate-x-[25px]"}
+            extra={"translate-x-[25px] pl-0"}
           />
         </div>
-        <div>
+        <div className="flex">
           <TextBar
-            text={"DEVELOPER"}
+            text={"DEVEL"}
             shadow={"bottom_left_purple"}
             direction={"left"}
-            extra={"-translate-x-[50px]"}
+            extra={"-translate-x-[50px] z-10 pr-0"}
+          />
+          <TextBar
+            text={"OPER"}
+            shadow={"bottom_left_purple"}
+            direction={"right"}
+            extra={"-translate-x-[50px] pl-0"}
           />
         </div>
       </div>
