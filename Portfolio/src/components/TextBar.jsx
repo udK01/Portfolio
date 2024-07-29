@@ -34,9 +34,6 @@ export default function TextBar({ text, shadow, direction, extra }) {
             target.classList.add("animate_text_right");
             target.classList.remove("animate_text_left");
           }
-        } else {
-          target.classList.remove("animate_text_left");
-          target.classList.remove("animate_text_right");
         }
       });
     });

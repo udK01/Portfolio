@@ -13,10 +13,6 @@
   }
 }
 
-.animate_text_left {
-  animation: expandLeft 1.5s ease-in-out forwards;
-}
-
 @keyframes expandRight {
   from {
     clip-path: inset(0 0 0 100%);
@@ -26,6 +22,10 @@
   }
 }
 
+.animate_text_left {
+  animation: expandLeft 1.25s ease-in-out forwards;
+}
+
 .animate_text_right {
-  animation: expandRight 1.5s ease-in-out forwards;
+  animation: expandRight 1.25s ease-in-out forwards;
 }
