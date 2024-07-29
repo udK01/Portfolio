@@ -1,0 +1,14 @@
+@keyframes expand {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.circular-reveal {
+  animation: expand 1.25s ease-in-out forwards;
+  animation-delay: 1s;
+  clip-path: circle(0% at 50% 50%);
+}
