@@ -58,7 +58,7 @@ export default function TextBar({ text, shadow, direction, extra }) {
   return (
     <div
       ref={textBarRef}
-      className={`${bgColorClass} ${shadowClass} opacity-0 h-[125px] items-center w-fit font-black text-[60px] py-27 px-14 font-poppins tracking-[20px] ${extra}`}
+      className={`${bgColorClass} ${shadowClass} h-[125px] items-center w-fit font-black text-[60px] py-27 px-14 font-poppins tracking-[20px] ${extra}`}
     >
       <p className="h-full flex items-center">{text}</p>
     </div>

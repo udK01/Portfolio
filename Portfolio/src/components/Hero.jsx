@@ -17,48 +17,24 @@ export default function Hero() {
             className="w-[85%] h-[85%] absolute"
           />
         </div>
-        <div className="flex">
-          <TextBar
-            text={"DOM"}
-            shadow={"top_left_purple"}
-            direction={"left"}
-            extra={"-translate-x-[50px] z-10 pr-0"}
-          />
-          <TextBar
-            text={"INIK"}
-            shadow={"top_left_purple"}
-            direction={"right"}
-            extra={"-translate-x-[50px] pl-0"}
-          />
-        </div>
-        <div className="flex">
-          <TextBar
-            text={"MUR"}
-            shadow={"bottom_right_green"}
-            direction={"left"}
-            extra={"translate-x-[25px] z-10 shadow-none pr-0"}
-          />
-          <TextBar
-            text={"ANYI"}
-            shadow={"bottom_right_green"}
-            direction={"right"}
-            extra={"translate-x-[25px] pl-0"}
-          />
-        </div>
-        <div className="flex">
-          <TextBar
-            text={"DEVEL"}
-            shadow={"bottom_left_purple"}
-            direction={"left"}
-            extra={"-translate-x-[50px] z-10 pr-0"}
-          />
-          <TextBar
-            text={"OPER"}
-            shadow={"bottom_left_purple"}
-            direction={"right"}
-            extra={"-translate-x-[50px] pl-0"}
-          />
-        </div>
+        <TextBar
+          text={"DOMINIK"}
+          shadow={"top_left_purple"}
+          direction={"left"}
+          extra={"-translate-x-[50px] z-10 opacity-0"}
+        />
+        <TextBar
+          text={"MURANYI"}
+          shadow={"bottom_right_green"}
+          direction={"right"}
+          extra={"translate-x-[25px] z-10 opacity-0"}
+        />
+        <TextBar
+          text={"DEVELOPER"}
+          shadow={"bottom_left_purple"}
+          direction={"left"}
+          extra={"-translate-x-[50px] z-10 opacity-0"}
+        />
       </div>
     </section>
   );
