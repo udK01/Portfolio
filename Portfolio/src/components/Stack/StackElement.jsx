@@ -30,8 +30,8 @@ export default function StackElement({ icon, text, colour }) {
     : "border-primary_green";
   const textColour = isGreen ? "text-primary_purple" : "text-primary_green";
   const boxShadow = isGreen
-    ? "inset 4px 4px 4px #4CFFB4, 4px 4px 4px #9747FF"
-    : "inset -4px 4px 4px #9747FF, -4px 4px 4px #4CFFB4";
+    ? "inset -4px 4px 4px #9747FF, -4px 4px 4px #4CFFB4"
+    : "inset 4px 4px 4px #4CFFB4, 4px 4px 4px #9747FF";
   const textShadow = isGreen ? "3px 3px #4CFFB4" : "3px 3px #9747FF";
 
   return (
