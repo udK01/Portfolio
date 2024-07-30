@@ -1,0 +1,25 @@
+@keyframes scrollLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -63%;
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    left: -63%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.animate_left {
+  animation: scrollLeft 20s linear infinite;
+}
+
+.animate_right {
+  animation: scrollRight 20s linear infinite;
+}
