@@ -11,39 +11,36 @@ export default function Stack() {
       </div>
 
       {/* Slider 1 */}
-      <div className="slider">
-        <div className="list">
-          <div className="item">
-            <StackElement
-              icon={"./React.png"}
-              text={"React"}
-              colour={"purple"}
-            />
-          </div>
-          <div className="item">
-            <StackElement
-              icon={"./Js.png"}
-              text={"Javascript"}
-              colour={"green"}
-            />
-          </div>
-          <div className="item">
-            <StackElement
-              icon={"./Figma.png"}
-              text={"Figma"}
-              colour={"purple"}
-            />
-          </div>
-          <div className="item">
-            <StackElement icon={"./Html.png"} text={"HTML"} colour={"green"} />
-          </div>
-          <div className="item">
-            <StackElement
-              icon={"./Github.png"}
-              text={"GitHub"}
-              colour={"purple"}
-            />
-          </div>
+      <div className="w-[200%] h-[150px] overflow-hidden relative mb-[18px] z-10">
+        <div className="w-[200%] flex items-center h-full absolute left-0 animate_left">
+          <StackElement icon={"./React.png"} text={"React"} colour={"purple"} />
+          <StackElement
+            icon={"./Js.png"}
+            text={"Javascript"}
+            colour={"green"}
+          />
+          <StackElement icon={"./Figma.png"} text={"Figma"} colour={"purple"} />
+          <StackElement icon={"./Html.png"} text={"HTML"} colour={"green"} />
+
+          <StackElement
+            icon={"./Github.png"}
+            text={"GitHub"}
+            colour={"purple"}
+          />
+          <StackElement icon={"./React.png"} text={"React"} colour={"green"} />
+          <StackElement
+            icon={"./Js.png"}
+            text={"Javascript"}
+            colour={"purple"}
+          />
+          <StackElement icon={"./Figma.png"} text={"Figma"} colour={"green"} />
+          <StackElement icon={"./Html.png"} text={"HTML"} colour={"purple"} />
+
+          <StackElement
+            icon={"./Github.png"}
+            text={"GitHub"}
+            colour={"green"}
+          />
         </div>
       </div>
 
