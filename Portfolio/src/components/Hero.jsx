@@ -6,7 +6,7 @@ import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   return (
-    <section>
+    <section id="ABOUT ME">
       <div className="flex flex-col justify-center items-center w-full h-screen">
         <div className="absolute z-10 w-full h-screen circular-reveal opacity-0 mt-10">
           <Spline scene="https://prod.spline.design/Tr9fJ1rZOicDY-Y1/scene.splinecode" />
@@ -17,7 +17,6 @@ export default function Hero() {
             className="w-[85%] h-[85%] absolute"
           />
         </div>
-        <div id="ABOUT ME" />
         <TextBar
           text={"DOMINIK"}
           shadow={"top_left_purple"}

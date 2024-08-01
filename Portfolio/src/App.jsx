@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 
 export default function App() {
   return (
-    <section className="h-[3000px] bg-primary_gray">
+    <section className="bg-primary_gray">
       <Navbar />
       <SideBar />
       <Hero />

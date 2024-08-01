@@ -5,7 +5,7 @@ import "../utils/stack.css";
 
 export default function Stack() {
   return (
-    <section className="overflow-hidden h-screen">
+    <section id="STACK" className="overflow-hidden h-screen">
       <div className="w-full flex justify-center my-[150px]">
         <TextBar
           text={"STACK"}
@@ -15,10 +15,7 @@ export default function Stack() {
       </div>
 
       {/* Slider 1 */}
-      <div
-        id="STACK"
-        className="w-[200%] h-[150px] overflow-hidden relative mb-[18px] z-10"
-      >
+      <div className="w-[200%] h-[150px] overflow-hidden relative mb-[18px] z-10">
         <div className="w-[200%] flex items-center h-full absolute left-0 animate_left">
           <StackElement
             icon={"./Icons/React.png"}

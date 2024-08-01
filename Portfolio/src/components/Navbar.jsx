@@ -39,7 +39,14 @@ export default function Navbar() {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback);
+    const observerOptions = {
+      rootMargin: "-500px 0px -500px 0px",
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
 
     elements.map((el) => observer.observe(el));
 
