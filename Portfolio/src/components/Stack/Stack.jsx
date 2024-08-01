@@ -7,7 +7,11 @@ export default function Stack() {
   return (
     <section className="overflow-hidden">
       <div className="w-full flex justify-center mb-[150px]">
-        <TextBar text={"STACK"} shadow={"top_right_green"} extra={"z-10"} />
+        <TextBar
+          text={"STACK"}
+          shadow={"top_right_green"}
+          extra={"z-10 mt-[10px]"}
+        />
       </div>
 
       {/* Slider 1 */}
@@ -45,7 +49,7 @@ export default function Stack() {
       </div>
 
       {/* Dotted Background */}
-      <div className="absolute w-full h-full flex justify-center items-center -translate-y-[475px]">
+      <div className="absolute w-full h-full flex justify-center items-center -translate-y-[500px]">
         <img src="./greendotsbackground.png" />
       </div>
 

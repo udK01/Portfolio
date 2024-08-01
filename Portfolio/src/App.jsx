@@ -1,7 +1,8 @@
+import Projects from "./components/Projects/Projects";
 import ScrollButton from "./components/ScrollButton";
+import Stack from "./components/Stack/Stack";
 import SideBar from "./components/SideBar";
 import Navbar from "./components/Navbar";
-import Stack from "./components/Stack/Stack";
 import Hero from "./components/Hero";
 
 export default function App() {
@@ -9,9 +10,10 @@ export default function App() {
     <section className="h-[3000px] bg-primary_gray">
       <Navbar />
       <SideBar />
-      <div className="space-y-[80px]">
+      <div className="space-y-[150px]">
         <Hero />
         <Stack />
+        <Projects />
       </div>
 
       <ScrollButton />
