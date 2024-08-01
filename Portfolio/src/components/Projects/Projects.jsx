@@ -4,7 +4,7 @@ import TextBar from "../TextBar";
 export default function Projects() {
   return (
     <section>
-      <div className="w-full flex justify-center mb-[150px]">
+      <div id="PROJECTS" className="w-full flex justify-center my-[150px]">
         <TextBar
           text={"PROJECTS"}
           shadow={"bottom_right_purple"}

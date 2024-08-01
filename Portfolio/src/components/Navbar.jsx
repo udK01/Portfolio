@@ -1,10 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./utils/navbar.css";
 
 export default function Navbar() {
   const menuItems = ["About Me", "Stack", "Projects", "Experiences", "Contact"];
-  const [highlight, setHighlight] = useState(0);
+  const [highlight, setHighlight] = useState(-1);
+
+  useEffect(() => {
+    const aboutMeEl = document.getElementById("ABOUT ME");
+    const stackEl = document.getElementById("STACK");
+    const projectEl = document.getElementById("PROJECTS");
+
+    const elements = [aboutMeEl, stackEl, projectEl];
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          switch (entry.target.id) {
+            case "ABOUT ME":
+              setHighlight(0);
+              break;
+            case "STACK":
+              setHighlight(1);
+              break;
+            case "PROJECTS":
+              setHighlight(2);
+              break;
+            case "EXPERIENCES":
+              setHighlight(3);
+              break;
+            case "CONTACT":
+              setHighlight(4);
+              break;
+            default:
+              setHighlight(0);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback);
+
+    elements.map((el) => observer.observe(el));
+
+    return () => {
+      elements.map((el) => observer.unobserve(el));
+    };
+  }, []);
 
   return (
     <div className="flex fixed bg-primary_gray h-[117px] items-center w-full navbar-move z-40">

@@ -17,6 +17,7 @@ export default function Hero() {
             className="w-[85%] h-[85%] absolute"
           />
         </div>
+        <div id="ABOUT ME" />
         <TextBar
           text={"DOMINIK"}
           shadow={"top_left_purple"}

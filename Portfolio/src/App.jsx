@@ -10,12 +10,9 @@ export default function App() {
     <section className="h-[3000px] bg-primary_gray">
       <Navbar />
       <SideBar />
-      <div className="space-y-[150px]">
-        <Hero />
-        <Stack />
-        <Projects />
-      </div>
-
+      <Hero />
+      <Stack />
+      <Projects />
       <ScrollButton />
     </section>
   );
