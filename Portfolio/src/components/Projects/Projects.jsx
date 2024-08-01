@@ -12,7 +12,7 @@ export default function Projects() {
         />
       </div>
 
-      <div className="w-full flex justify-center gap-10">
+      <div className="w-full flex justify-center gap-10 overflow-hidden">
         <ProjectCard src={"./Projects/project1.png"} />
         <ProjectCard src={"./Projects/project2.png"} />
         <ProjectCard src={"./Projects/project3.png"} />
