@@ -5,8 +5,11 @@ import "../utils/stack.css";
 
 export default function Stack() {
   return (
-    <section id="STACK" className="overflow-hidden h-screen">
-      <div className="w-full flex justify-center my-[150px]">
+    <section
+      id="STACK"
+      className="overflow-hidden h-screen flex flex-col justify-center"
+    >
+      <div className="w-full flex justify-center mb-[150px]">
         <TextBar
           text={"STACK"}
           shadow={"top_right_green"}
@@ -72,7 +75,7 @@ export default function Stack() {
       </div>
 
       {/* Dotted Background */}
-      <div className="absolute w-full h-[20%] flex justify-center items-center -translate-y-[150px]">
+      <div className="absolute w-full h-[20%] flex justify-center items-center translate-y-[75px]">
         <img src="./Backgrounds/greendotsbackground.png" />
       </div>
 

@@ -3,7 +3,7 @@ import TextBar from "../TextBar";
 
 export default function Projects() {
   return (
-    <section id="PROJECTS" className="h-screen">
+    <section id="PROJECTS" className="h-screen flex flex-col justify-center">
       <div className="w-full flex justify-center mb-[150px]">
         <TextBar
           text={"PROJECTS"}
