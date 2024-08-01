@@ -4,6 +4,32 @@ import StackElement from "./StackElement";
 import "../utils/stack.css";
 
 export default function Stack() {
+  const slider1 = [
+    { icon: "./Icons/React.png", text: "React", colour: "purple" },
+    { icon: "./Icons/Js.png", text: "Javascript", colour: "green" },
+    { icon: "./Icons/Figma.png", text: "Figma", colour: "purple" },
+    { icon: "./Icons/Html.png", text: "HTML", colour: "green" },
+    { icon: "./Icons/Github.png", text: "GitHub", colour: "purple" },
+    { icon: "./Icons/React.png", text: "React", colour: "green" },
+    { icon: "./Icons/Js.png", text: "Javascript", colour: "purple" },
+    { icon: "./Icons/Figma.png", text: "Figma", colour: "green" },
+    { icon: "./Icons/Html.png", text: "HTML", colour: "purple" },
+    { icon: "./Icons/Github.png", text: "GitHub", colour: "green" },
+  ];
+
+  const slider2 = [
+    { icon: "./Icons/MySQL.png", text: "MySQL", colour: "purple" },
+    { icon: "./Icons/Docker.png", text: "Docker", colour: "green" },
+    { icon: "./Icons/Tailwind.png", text: "Tailwind", colour: "purple" },
+    { icon: "./Icons/Node.png", text: "Node", colour: "green" },
+    { icon: "./Icons/VsCode.png", text: "VsCode", colour: "purple" },
+    { icon: "./Icons/MySQL.png", text: "MySQL", colour: "green" },
+    { icon: "./Icons/Docker.png", text: "Docker", colour: "purple" },
+    { icon: "./Icons/Tailwind.png", text: "Tailwind", colour: "green" },
+    { icon: "./Icons/Node.png", text: "Node", colour: "purple" },
+    { icon: "./Icons/VsCode.png", text: "VsCode", colour: "green" },
+  ];
+
   return (
     <section
       id="STACK"
@@ -20,57 +46,14 @@ export default function Stack() {
       {/* Slider 1 */}
       <div className="w-[200%] h-[150px] overflow-hidden relative mb-[18px] z-10">
         <div className="w-[200%] flex items-center h-full absolute left-0 animate_left">
-          <StackElement
-            icon={"./Icons/React.png"}
-            text={"React"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/Js.png"}
-            text={"Javascript"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/Figma.png"}
-            text={"Figma"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/Html.png"}
-            text={"HTML"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/Github.png"}
-            text={"GitHub"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/React.png"}
-            text={"React"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/Js.png"}
-            text={"Javascript"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/Figma.png"}
-            text={"Figma"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/Html.png"}
-            text={"HTML"}
-            colour={"purple"}
-          />
-
-          <StackElement
-            icon={"./Icons/Github.png"}
-            text={"GitHub"}
-            colour={"green"}
-          />
+          {slider1.map((element, index) => (
+            <StackElement
+              key={index}
+              icon={element.icon}
+              text={element.text}
+              colour={element.colour}
+            />
+          ))}
         </div>
       </div>
 
@@ -82,56 +65,14 @@ export default function Stack() {
       {/* Slider 2 */}
       <div className="w-[200%] h-[150px] overflow-hidden relative z-10">
         <div className="w-[200%] flex items-center h-full absolute left-0 animate_right">
-          <StackElement
-            icon={"./Icons/MySQL.png"}
-            text={"MySQL"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/Docker.png"}
-            text={"Docker"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/Tailwind.png"}
-            text={"Tailwind"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/Node.png"}
-            text={"Node"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/VsCode.png"}
-            text={"VsCode"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/MySQL.png"}
-            text={"MySQL"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/Docker.png"}
-            text={"Docker"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/Tailwind.png"}
-            text={"Tailwind"}
-            colour={"green"}
-          />
-          <StackElement
-            icon={"./Icons/Node.png"}
-            text={"Node"}
-            colour={"purple"}
-          />
-          <StackElement
-            icon={"./Icons/VsCode.png"}
-            text={"VsCode"}
-            colour={"green"}
-          />
+          {slider2.map((element, index) => (
+            <StackElement
+              key={index}
+              icon={element.icon}
+              text={element.text}
+              colour={element.colour}
+            />
+          ))}
         </div>
       </div>
     </section>
