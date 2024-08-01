@@ -1,3 +1,4 @@
+import ProjectCard from "./ProjectCard";
 import TextBar from "../TextBar";
 
 export default function Projects() {
@@ -11,7 +12,13 @@ export default function Projects() {
         />
       </div>
 
-      <div className="w-full flex justify-center gap-10"></div>
+      <div className="w-full flex justify-center gap-10">
+        <ProjectCard src={"./Projects/project1.png"} />
+        <ProjectCard src={"./Projects/project2.png"} />
+        <ProjectCard src={"./Projects/project3.png"} />
+        <ProjectCard src={"./Projects/project4.png"} />
+        <ProjectCard src={"./Projects/project5.png"} />
+      </div>
     </section>
   );
 }

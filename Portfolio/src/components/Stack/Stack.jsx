@@ -72,7 +72,7 @@ export default function Stack() {
       </div>
 
       {/* Dotted Background */}
-      <div className="absolute w-full h-full flex justify-center items-center -translate-y-[500px]">
+      <div className="absolute w-full h-[5%] flex justify-center items-center -translate-y-[100px]">
         <img src="./Backgrounds/greendotsbackground.png" />
       </div>
 
