@@ -1,3 +1,5 @@
+import SliderCard from "./SliderCard";
+
 import "../utils/projects.css";
 
 export default function ProjectSlider({ items, width, height }) {
@@ -16,7 +18,12 @@ export default function ProjectSlider({ items, width, height }) {
             className="item"
             style={{ "--position": item.position }}
           >
-            <img src={item.src} alt={`Item ${item.position}`} />
+            <SliderCard
+              icon={item.icon}
+              text={item.text}
+              colour={item.colour}
+            />
+            {/* <img src={item.src} alt={`Item ${item.position}`} /> */}
           </div>
         ))}
       </div>

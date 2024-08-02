@@ -16,14 +16,28 @@ export default function ProjectOverview({
       id: 1,
       title: "Laravel Blog Site",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
-      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      tools: [
+        {
+          icon: "./Icons/Docker.png",
+          text: "Docker",
+          colour: "green",
+          position: 1,
+        },
+      ],
       video: "...",
     },
     {
       id: 2,
       title: "Unity Upgraded Frogger",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
-      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      tools: [
+        {
+          icon: "./Icons/Docker.png",
+          text: "Docker",
+          colour: "green",
+          position: 1,
+        },
+      ],
       video: "...",
     },
     {
@@ -31,8 +45,12 @@ export default function ProjectOverview({
       title: "Expense Tracker App",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
       tools: [
-        { src: "./Icons/Docker.png", position: 1 },
-        { src: "./Icons/Docker.png", position: 2 },
+        {
+          icon: "./Icons/Js.png",
+          text: "Javascript",
+          colour: "purple",
+          position: 1,
+        },
       ],
       video: "...",
     },
@@ -40,14 +58,118 @@ export default function ProjectOverview({
       id: 4,
       title: "Manga Site",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
-      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      tools: [
+        {
+          icon: "./Icons/Docker.png",
+          text: "Docker",
+          colour: "green",
+          position: 1,
+        },
+        {
+          icon: "./Icons/Figma.png",
+          text: "Figma",
+          colour: "purple",
+          position: 2,
+        },
+        {
+          icon: "./Icons/Github.png",
+          text: "GitHub",
+          colour: "green",
+          position: 3,
+        },
+        {
+          icon: "./Icons/Html.png",
+          text: "HTML",
+          colour: "purple",
+          position: 4,
+        },
+        {
+          icon: "./Icons/Js.png",
+          text: "Javascript",
+          colour: "green",
+          position: 5,
+        },
+        {
+          icon: "./Icons/MySQL.png",
+          text: "MySQL",
+          colour: "purple",
+          position: 6,
+        },
+        {
+          icon: "./Icons/Node.png",
+          text: "Node",
+          colour: "green",
+          position: 7,
+        },
+        {
+          icon: "./Icons/React.png",
+          text: "React",
+          colour: "purple",
+          position: 8,
+        },
+        {
+          icon: "./Icons/Tailwind.png",
+          text: "Tailwind",
+          colour: "green",
+          position: 9,
+        },
+        {
+          icon: "./Icons/VsCode.png",
+          text: "VsCode",
+          colour: "purple",
+          position: 10,
+        },
+      ],
       video: "...",
     },
     {
       id: 5,
       title: "Scroll Animate Website",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
-      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      tools: [
+        {
+          icon: "./Icons/Html.png",
+          text: "HTML",
+          colour: "green",
+          position: 1,
+        },
+        {
+          icon: "./Icons/Js.png",
+          text: "Javascript",
+          colour: "purple",
+          position: 2,
+        },
+        {
+          icon: "./Icons/VsCode.png",
+          text: "VsCode",
+          colour: "green",
+          position: 3,
+        },
+        {
+          icon: "./Icons/Github.png",
+          text: "GitHub",
+          colour: "purple",
+          position: 4,
+        },
+        {
+          icon: "./Icons/React.png",
+          text: "React",
+          colour: "green",
+          position: 5,
+        },
+        {
+          icon: "./Icons/Node.png",
+          text: "Node",
+          colour: "purple",
+          position: 6,
+        },
+        {
+          icon: "./Icons/Tailwind.png",
+          text: "Tailwind",
+          colour: "green",
+          position: 7,
+        },
+      ],
       video: "...",
     },
   ];
@@ -99,13 +221,12 @@ export default function ProjectOverview({
             {selectedInfo[0].desc}
           </div>
           {/* Scroller */}
-          <div>
-            <ProjectSlider
-              items={selectedInfo[0].items}
-              width={"200px"}
-              height={"260px"}
-            />
-          </div>
+          <ProjectSlider
+            key={selectedInfo[0].id}
+            items={selectedInfo[0].tools}
+            width={"200px"}
+            height={"60px"}
+          />
           {/* Video */}
           <div></div>
         </div>
