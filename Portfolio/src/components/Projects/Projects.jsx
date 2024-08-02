@@ -1,26 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
+import ProjectOverview from "./ProjectOverview";
 import ProjectCard from "./ProjectCard";
 import TextBar from "../TextBar";
 
 export default function Projects() {
   const projects = [
-    "./Projects/project1.png",
-    "./Projects/project2.png",
-    "./Projects/project3.png",
-    "./Projects/project4.png",
-    "./Projects/project5.png",
+    { id: 1, src: "./Projects/project1.png" },
+    { id: 2, src: "./Projects/project2.png" },
+    { id: 3, src: "./Projects/project3.png" },
+    { id: 4, src: "./Projects/project4.png" },
+    { id: 5, src: "./Projects/project5.png" },
   ];
 
-  const filteredProjects = [...projects];
-
-  const [selectedProject, setSelectedProject] = useState();
-
-  function handleClick(project) {
-    // Set selected project and filter from list.
-    setSelectedProject(project);
-    filteredProjects.filter((p) => p !== project);
-  }
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section id="PROJECTS" className="h-screen flex flex-col justify-center">
@@ -32,13 +25,21 @@ export default function Projects() {
         />
       </div>
 
-      <div className="w-full flex justify-center gap-10 overflow-hidden">
-        {projects.map((project, index) => (
-          <div key={index} onClick={() => handleClick(project)}>
-            <ProjectCard src={project} />
-          </div>
-        ))}
-      </div>
+      {selectedProject === null ? (
+        <div className="w-full flex justify-center gap-10 overflow-hidden">
+          {projects.map((project) => (
+            <div key={project.id} onClick={() => setSelectedProject(project)}>
+              <ProjectCard src={project.src} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <ProjectOverview
+          projects={projects}
+          selectedProject={selectedProject}
+          setSelectedProject={setSelectedProject}
+        />
+      )}
     </section>
   );
 }
