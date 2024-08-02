@@ -9,6 +9,7 @@
   width: 100%;
   min-width: calc(var(--width) * var(--quantity));
   position: relative;
+  transform: translateX(calc(calc(var(--offset) * var(--width)) * -1));
 }
 
 .slider .list .item {
@@ -27,4 +28,7 @@
   to {
     left: calc(var(--width) * -1);
   }
+}
+.slider:hover .item {
+  animation-play-state: paused !important;
 }

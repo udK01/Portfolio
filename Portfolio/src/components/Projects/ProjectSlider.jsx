@@ -7,6 +7,7 @@ export default function ProjectSlider({ items, width, height }) {
     "--width": width,
     "--height": height,
     "--quantity": items.length,
+    "--offset": items.length > 4 ? items.length - 4 : 0,
   };
 
   return (
