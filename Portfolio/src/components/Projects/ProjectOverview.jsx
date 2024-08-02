@@ -48,12 +48,12 @@ export default function ProjectOverview({
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="size-[150px] filter grayscale transition-all duration-500 ease-in-out hover:grayscale-0 hover:filter-none hover:cursor-pointer"
+            className="size-[150px] hover:cursor-pointer transition-colors duration-500 border-2 border-primary_purple hover:border-primary_green"
             onClick={() => setSelectedProject(project)}
           >
             <img
               src={project.src}
-              className="relative w-full h-full object-cover border-2 border-primary_purple"
+              className="relative w-full h-full object-cover"
             />
           </div>
         ))}
@@ -66,9 +66,10 @@ export default function ProjectOverview({
         />
       </div>
       <div>
-        <div className="w-[674px] mb-10 flex">
+        <div className="w-[674px] mb-10 flex flex-col space-y-10">
+          {/* Title and Close Button */}
           <div className="w-full flex justify-between items-center">
-            <div className="font-poppins font-black text-[40px] text-white">
+            <div className="font-black font-robot text-[50px] text-white">
               {selectedInfo[0].title}
             </div>
             <div
@@ -78,6 +79,14 @@ export default function ProjectOverview({
               <IoMdClose className="size-[30px] text-white" />
             </div>
           </div>
+          {/* Description */}
+          <div className="w-full text-white font-robot text-[20px] line-clamp-4">
+            {selectedInfo[0].desc}
+          </div>
+          {/* Scroller */}
+          <div></div>
+          {/* Video */}
+          <div></div>
         </div>
       </div>
     </div>
