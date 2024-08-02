@@ -1,3 +1,5 @@
+import { IoMdClose } from "react-icons/io";
+
 export default function ProjectOverview({
   projects,
   selectedProject,
@@ -35,6 +37,10 @@ export default function ProjectOverview({
     },
   ];
 
+  const selectedInfo = [...projectInfo].filter(
+    (p) => p.id === selectedProject.id
+  );
+
   return (
     <div className="w-full flex justify-center gap-10">
       {/* Projects Sidebar */}
@@ -60,7 +66,19 @@ export default function ProjectOverview({
         />
       </div>
       <div>
-        <div className="w-[674px] mb-10 flex"></div>
+        <div className="w-[674px] mb-10 flex">
+          <div className="w-full flex justify-between items-center">
+            <div className="font-poppins font-black text-[40px] text-white">
+              {selectedInfo[0].title}
+            </div>
+            <div
+              className="size-[50px] border-2 border-primary_purple rounded-full flex justify-center items-center"
+              onClick={() => setSelectedProject(null)}
+            >
+              <IoMdClose className="size-[30px] text-white" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

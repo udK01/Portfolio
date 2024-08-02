@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        robot: ["Roboto", "sans-serif"],
       },
       boxShadow: {
         top_left_purple: "-10px -10px 0 #9747FF",
