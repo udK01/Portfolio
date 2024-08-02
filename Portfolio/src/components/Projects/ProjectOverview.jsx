@@ -1,5 +1,7 @@
 import { IoMdClose } from "react-icons/io";
 
+import ProjectSlider from "./ProjectSlider";
+
 export default function ProjectOverview({
   projects,
   selectedProject,
@@ -14,26 +16,39 @@ export default function ProjectOverview({
       id: 1,
       title: "Laravel Blog Site",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      video: "...",
     },
     {
       id: 2,
       title: "Unity Upgraded Frogger",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      video: "...",
     },
     {
       id: 3,
       title: "Expense Tracker App",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      tools: [
+        { src: "./Icons/Docker.png", position: 1 },
+        { src: "./Icons/Docker.png", position: 2 },
+      ],
+      video: "...",
     },
     {
       id: 4,
       title: "Manga Site",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      video: "...",
     },
     {
       id: 5,
       title: "Scroll Animate Website",
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      tools: [{ src: "./Icons/Docker.png", position: 1 }],
+      video: "...",
     },
   ];
 
@@ -84,7 +99,13 @@ export default function ProjectOverview({
             {selectedInfo[0].desc}
           </div>
           {/* Scroller */}
-          <div></div>
+          <div>
+            <ProjectSlider
+              items={selectedInfo[0].items}
+              width={"200px"}
+              height={"260px"}
+            />
+          </div>
           {/* Video */}
           <div></div>
         </div>
