@@ -25,6 +25,13 @@ export default function Projects() {
         />
       </div>
 
+      <div className="w-full h-full absolute flex justify-center items-center">
+        <img
+          src="./Backgrounds/diamonds.png"
+          className="h-[90%] translate-y-[125px]"
+        />
+      </div>
+
       {selectedProject === null ? (
         <div className="w-full flex justify-center gap-10 overflow-hidden">
           {projects.map((project) => (

@@ -42,7 +42,7 @@ export default function ProjectOverview({
   );
 
   return (
-    <div className="w-full flex justify-center gap-10">
+    <div className="w-full flex justify-center gap-10 z-10">
       {/* Projects Sidebar */}
       <div className="flex flex-col space-y-[20px]">
         {filteredProjects.map((project) => (
