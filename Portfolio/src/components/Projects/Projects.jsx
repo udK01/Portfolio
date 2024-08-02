@@ -17,6 +17,7 @@ export default function Projects() {
 
   return (
     <section id="PROJECTS" className="h-screen flex flex-col justify-center">
+      {/* Title */}
       <div className="w-full flex justify-center mb-[150px]">
         <TextBar
           text={"PROJECTS"}
@@ -25,6 +26,7 @@ export default function Projects() {
         />
       </div>
 
+      {/* Background Diamonds */}
       <div className="w-full h-full absolute flex justify-center items-center">
         <img
           src="./Backgrounds/diamonds.png"
@@ -32,6 +34,7 @@ export default function Projects() {
         />
       </div>
 
+      {/* Cards */}
       {selectedProject === null ? (
         <div className="w-full flex justify-center gap-10 overflow-hidden">
           {projects.map((project) => (
