@@ -54,7 +54,7 @@ export default function ProjectOverview({
           position: 6,
         },
       ],
-      video: "...",
+      video: "./Videos/project1.mp4",
     },
     {
       id: 2,
@@ -86,7 +86,7 @@ export default function ProjectOverview({
           position: 4,
         },
       ],
-      video: "...",
+      video: "./Videos/project2.mp4",
     },
     {
       id: 3,
@@ -136,7 +136,7 @@ export default function ProjectOverview({
           position: 7,
         },
       ],
-      video: "...",
+      video: "./Videos/project3.mp4",
     },
     {
       id: 4,
@@ -204,7 +204,7 @@ export default function ProjectOverview({
           position: 10,
         },
       ],
-      video: "...",
+      video: "./Videos/project4.mp4",
     },
     {
       id: 5,
@@ -316,7 +316,7 @@ export default function ProjectOverview({
 
           {/* Video */}
           <div className="border-2 border-primary_purple">
-            <video className="w-full h-full" controls>
+            <video key={selectedInfo[0].id} className="w-full h-full" controls>
               <source src={selectedInfo[0].video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
