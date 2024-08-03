@@ -24,7 +24,6 @@ export default function ProjectSlider({ items, width, height }) {
               text={item.text}
               colour={item.colour}
             />
-            {/* <img src={item.src} alt={`Item ${item.position}`} /> */}
           </div>
         ))}
       </div>

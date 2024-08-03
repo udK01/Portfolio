@@ -254,7 +254,7 @@ export default function ProjectOverview({
           position: 7,
         },
       ],
-      video: "...",
+      video: "./Videos/project5.mp4",
     },
   ];
 
@@ -287,32 +287,40 @@ export default function ProjectOverview({
         />
       </div>
       <div>
-        <div className="w-[674px] mb-10 flex flex-col space-y-10">
-          {/* Title and Close Button */}
-          <div className="w-full flex justify-between items-center">
-            <div className="font-black font-robot text-[50px] text-white">
-              {selectedInfo[0].title}
+        <div className="w-[674px] h-full max-h-[660px] mb-10 flex flex-col justify-between">
+          <div className="flex flex-col space-y-[18px]">
+            {/* Title and Close Button */}
+            <div className="w-full flex justify-between items-center">
+              <div className="font-black font-robot text-[50px] text-white">
+                {selectedInfo[0].title}
+              </div>
+              <div
+                className="size-[50px] border-2 border-primary_purple rounded-full flex justify-center items-center"
+                onClick={() => setSelectedProject(null)}
+              >
+                <IoMdClose className="size-[30px] text-white" />
+              </div>
             </div>
-            <div
-              className="size-[50px] border-2 border-primary_purple rounded-full flex justify-center items-center"
-              onClick={() => setSelectedProject(null)}
-            >
-              <IoMdClose className="size-[30px] text-white" />
+            {/* Description */}
+            <div className="w-full text-white font-robot text-[20px] line-clamp-4">
+              {selectedInfo[0].desc}
             </div>
+            {/* Scroller */}
+            <ProjectSlider
+              key={selectedInfo[0].id}
+              items={selectedInfo[0].tools}
+              width={"200px"}
+              height={"60px"}
+            />
           </div>
-          {/* Description */}
-          <div className="w-full text-white font-robot text-[20px] line-clamp-4">
-            {selectedInfo[0].desc}
-          </div>
-          {/* Scroller */}
-          <ProjectSlider
-            key={selectedInfo[0].id}
-            items={selectedInfo[0].tools}
-            width={"200px"}
-            height={"60px"}
-          />
+
           {/* Video */}
-          <div></div>
+          <div className="border-2 border-primary_purple">
+            <video className="w-full h-full" controls>
+              <source src={selectedInfo[0].video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </div>
