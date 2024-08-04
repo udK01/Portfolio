@@ -295,7 +295,7 @@ export default function ProjectOverview({
                 {selectedInfo[0].title}
               </div>
               <div
-                className="size-[50px] border-2 border-primary_purple rounded-full flex justify-center items-center"
+                className="size-[50px] border-2 border-primary_purple rounded-full flex justify-center items-center transition-colors duration-300 hover:bg-primary_purple hover:cursor-pointer"
                 onClick={() => setSelectedProject(null)}
               >
                 <IoMdClose className="size-[30px] text-white" />
