@@ -1,5 +1,5 @@
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import ProjectOverview from "./ProjectOverview";
 import ProjectCard from "./ProjectCard";
@@ -15,9 +15,36 @@ export default function Projects() {
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
+  const cardsRef = useRef(null);
+  const overviewRef = useRef(null);
+
+  useEffect(() => {
+    if (
+      selectedProject !== null &&
+      overviewRef.current &&
+      !projects.some((project) => project.id === selectedProject)
+    ) {
+      overviewRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
+    } else if (cardsRef.current) {
+      cardsRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
+    }
+  }, [selectedProject]);
 
   return (
-    <section id="PROJECTS" className="h-screen flex flex-col justify-center">
+    <section
+      id="PROJECTS"
+      className={`${
+        selectedProject === null ? "h-screen" : "h-full"
+      } flex flex-col justify-center`}
+    >
       {/* Title */}
       <div className="w-full flex justify-center my-[150px]">
         <TextBar
@@ -36,7 +63,7 @@ export default function Projects() {
       </div>
 
       {/* Cards */}
-      <div className="w-full h-full z-10">
+      <div ref={cardsRef} className="w-full h-full z-10">
         <TransitionGroup>
           {selectedProject === null ? (
             <CSSTransition key="project-list" classNames="fade" timeout={500}>
@@ -57,11 +84,13 @@ export default function Projects() {
               classNames="fade"
               timeout={500}
             >
-              <ProjectOverview
-                projects={projects}
-                selectedProject={selectedProject}
-                setSelectedProject={setSelectedProject}
-              />
+              <div ref={overviewRef}>
+                <ProjectOverview
+                  projects={projects}
+                  selectedProject={selectedProject}
+                  setSelectedProject={setSelectedProject}
+                />
+              </div>
             </CSSTransition>
           )}
         </TransitionGroup>

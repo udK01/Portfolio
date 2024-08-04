@@ -287,7 +287,7 @@ export default function ProjectOverview({
         />
       </div>
       <div>
-        <div className="w-[674px] h-full max-h-[660px] mb-10 flex flex-col justify-between">
+        <div className="w-[674px] h-full max-h-[660px] flex flex-col justify-between">
           <div className="flex flex-col space-y-[18px]">
             {/* Title and Close Button */}
             <div className="w-full flex justify-between items-center">
