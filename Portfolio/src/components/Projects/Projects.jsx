@@ -1,3 +1,4 @@
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useState } from "react";
 
 import ProjectOverview from "./ProjectOverview";
@@ -18,7 +19,7 @@ export default function Projects() {
   return (
     <section id="PROJECTS" className="h-screen flex flex-col justify-center">
       {/* Title */}
-      <div className="w-full flex justify-center mb-[150px]">
+      <div className="w-full flex justify-center my-[150px]">
         <TextBar
           text={"PROJECTS"}
           shadow={"bottom_right_purple"}
@@ -35,21 +36,36 @@ export default function Projects() {
       </div>
 
       {/* Cards */}
-      {selectedProject === null ? (
-        <div className="w-full flex justify-center gap-10 overflow-hidden">
-          {projects.map((project) => (
-            <div key={project.id} onClick={() => setSelectedProject(project)}>
-              <ProjectCard src={project.src} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <ProjectOverview
-          projects={projects}
-          selectedProject={selectedProject}
-          setSelectedProject={setSelectedProject}
-        />
-      )}
+      <div className="w-full h-full z-10">
+        <TransitionGroup>
+          {selectedProject === null ? (
+            <CSSTransition key="project-list" classNames="fade" timeout={500}>
+              <div className="w-full flex justify-center gap-10 overflow-hidden">
+                {projects.map((project) => (
+                  <div
+                    key={project.id}
+                    onClick={() => setSelectedProject(project)}
+                  >
+                    <ProjectCard src={project.src} />
+                  </div>
+                ))}
+              </div>
+            </CSSTransition>
+          ) : (
+            <CSSTransition
+              key="project-overview"
+              classNames="fade"
+              timeout={500}
+            >
+              <ProjectOverview
+                projects={projects}
+                selectedProject={selectedProject}
+                setSelectedProject={setSelectedProject}
+              />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+      </div>
     </section>
   );
 }
