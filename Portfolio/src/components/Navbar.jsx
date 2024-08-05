@@ -3,18 +3,12 @@ import "./utils/navbar.css";
 
 export default function Navbar() {
   const menuItems = ["About Me", "Stack", "Projects", "Experiences", "Contact"];
-  const items = [
-    "HERO",
-    "ABOUT ME",
-    "STACK",
-    "PROJECTS",
-    "EXPERIENCES",
-    "CONTACT",
-  ];
   const [highlight, setHighlight] = useState(-1);
 
   useEffect(() => {
-    const elements = items.map((item) => document.getElementById(item));
+    const elements = menuItems.map((item) =>
+      document.getElementById(item.toUpperCase())
+    );
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {

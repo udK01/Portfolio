@@ -15,27 +15,52 @@ export default function Projects() {
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
-  const cardsRef = useRef(null);
   const overviewRef = useRef(null);
+  const cardsRef = useRef(null);
 
   useEffect(() => {
-    if (
-      selectedProject !== null &&
-      overviewRef.current &&
-      !projects.some((project) => project.id === selectedProject)
-    ) {
-      overviewRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest",
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (selectedProject !== null && overviewRef.current) {
+            overviewRef.current.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "nearest",
+            });
+          } else if (cardsRef.current) {
+            cardsRef.current.scrollIntoView({
+              behavior: "smooth",
+              block: "end",
+              inline: "nearest",
+            });
+          }
+        }
       });
-    } else if (cardsRef.current) {
-      cardsRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest",
-      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-300px 0px -300px 0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    const element = document.getElementById("PROJECTS");
+
+    if (element) {
+      observer.observe(element);
     }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
   }, [selectedProject]);
 
   return (

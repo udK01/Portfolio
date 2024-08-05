@@ -4,7 +4,6 @@ import Experiences from "./components/Experiences";
 import Stack from "./components/Stack/Stack";
 import SideBar from "./components/SideBar";
 import Contact from "./components/Contact";
-import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
@@ -14,7 +13,6 @@ export default function App() {
       <Navbar />
       <SideBar />
       <Hero />
-      <AboutMe />
       <Stack />
       <Projects />
       <Experiences />
