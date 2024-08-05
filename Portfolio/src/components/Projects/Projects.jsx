@@ -46,7 +46,7 @@ export default function Projects() {
       } flex flex-col justify-center`}
     >
       {/* Title */}
-      <div className="w-full flex justify-center my-[150px]">
+      <div className="w-full flex justify-center my-[150px] scroll_animate">
         <TextBar
           text={"PROJECTS"}
           shadow={"bottom_right_purple"}
@@ -63,7 +63,7 @@ export default function Projects() {
       </div>
 
       {/* Cards */}
-      <div ref={cardsRef} className="w-full h-full z-10">
+      <div ref={cardsRef} className="w-full h-full z-10 scroll_animate">
         <TransitionGroup>
           {selectedProject === null ? (
             <CSSTransition key="project-list" classNames="fade" timeout={500}>
