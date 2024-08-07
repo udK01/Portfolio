@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./utils/navbar.css";
 
 export default function Navbar() {
-  const menuItems = ["About Me", "Stack", "Projects", "Experiences", "Contact"];
+  const menuItems = ["About Me", "Projects", "Experiences", "Contact"];
   const [highlight, setHighlight] = useState(-1);
 
   useEffect(() => {
@@ -17,17 +17,14 @@ export default function Navbar() {
             case "ABOUT ME":
               setHighlight(0);
               break;
-            case "STACK":
+            case "PROJECTS":
               setHighlight(1);
               break;
-            case "PROJECTS":
+            case "EXPERIENCES":
               setHighlight(2);
               break;
-            case "EXPERIENCES":
-              setHighlight(3);
-              break;
             case "CONTACT":
-              setHighlight(4);
+              setHighlight(3);
               break;
             default:
               setHighlight(-1);
