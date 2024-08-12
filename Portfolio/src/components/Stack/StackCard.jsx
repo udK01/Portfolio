@@ -5,7 +5,7 @@ export default function StackCard({ icon, text }) {
 
   return (
     <div
-      className="font-poppins text-white text-[24px]"
+      className="font-poppins text-white text-[24px] scroll_animate"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
