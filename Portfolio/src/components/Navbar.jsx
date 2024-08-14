@@ -72,6 +72,11 @@ export default function Navbar() {
           </p>
         ))}
       </div>
+      <div
+        className={`resume-border font-robot font-black hover:cursor-pointer text-[20px] hover:text-primary_green transition-colors duration-300 mr-[32px]`}
+      >
+        Resume.
+      </div>
     </div>
   );
 }

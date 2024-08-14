@@ -10,3 +10,31 @@
 .navbar-move {
   animation: navbar 1s linear forwards;
 }
+
+.resume-border {
+  position: relative;
+  background-color: #242020;
+  color: white;
+  z-index: 40;
+  border-radius: 20px;
+  padding: 8px 30px;
+  border: 2px solid transparent;
+}
+
+.resume-border::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  inset: 0;
+
+  /* border size */
+  padding: 2px;
+
+  /* gradient and subtracted mask */
+  background: linear-gradient(to top right, #9747ff, #4cffb4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
+  z-index: -1;
+}
