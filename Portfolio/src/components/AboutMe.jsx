@@ -1,4 +1,5 @@
 import TextBar from "./TextBar";
+import StackRow from "./Stack/StackRow";
 
 import "./utils/aboutme.css";
 
@@ -66,7 +67,13 @@ export default function AboutMe() {
       </div>
 
       {/* Stack */}
-      <div></div>
+      <div className="space-y-[32px] mt-[32px]">
+        <div className="flex justify-center gap-40">
+          <StackRow text={"Front End"} stack={front} />
+          <StackRow text={"Back End"} stack={back} />
+        </div>
+        <StackRow text={"Others"} stack={other} />
+      </div>
     </section>
   );
 }
