@@ -55,9 +55,9 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex fixed bg-primary_gray h-[117px] items-center w-full navbar-move z-40">
-      <img src="./logo.png" className="absolute w-[108px] h-[64px] ml-[32px]" />
-      <div className="flex text-[#7E7E7E] font-medium space-x-[60px] font-poppins text-[25px] mx-auto">
+    <div className="flex justify-between fixed bg-primary_gray h-[117px] items-center w-full navbar-move z-40">
+      <img src="./logo.png" className="w-[108px] h-[64px] ml-[32px]" />
+      <div className="flex text-[#7E7E7E] font-medium gap-20 font-poppins text-[25px]">
         {menuItems.map((item, index) => (
           <p
             key={index}
