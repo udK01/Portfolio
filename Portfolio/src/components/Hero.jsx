@@ -1,13 +1,32 @@
-import TextBar from "./TextBar";
-
 import "./utils/hero.css";
-
-import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   return (
     <section id="ABOUT ME">
-      <div className="flex flex-col justify-center items-center w-full h-screen">
+      <div className="flex flex-col justify-center items-center w-full h-screen space-y-20">
+        {/* Name & Occupation */}
+        <div className="font-robot font-black text-[80px] z-10">
+          <div className="text-white">Dominik Muranyi</div>
+          <div className="flex pl-5 items-center -mt-[30px]">
+            <div className="size-[40px] border-l-2 border-b-2 border-primary_purple -mt-[30px] mr-[10px]" />
+            <div className="text-primary_green">Full-Stack Developer</div>
+          </div>
+        </div>
+
+        {/* "Slogan" */}
+        <div className="font-robot font-semibold text-[32px] z-10 flex flex-col items-center">
+          <div className="text-white">
+            Turning Ideas into Digital Realities
+            <span className="text-primary_purple">,</span>
+          </div>
+          <div className="text-[#7E7E7E] text-[24px]">
+            Building <span className="text-primary_green">Your </span>Web
+            Solutions <span className="text-primary_green">Together</span>
+            <span className="text-primary_purple">.</span>
+          </div>
+        </div>
+
+        {/* Background */}
         <div className="absolute w-full h-full flex items-center justify-center mt-[140px] opacity-0 circular-reveal">
           <img
             src="./Backgrounds/squarebackground.png"
