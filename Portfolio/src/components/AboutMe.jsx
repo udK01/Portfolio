@@ -28,10 +28,10 @@ export default function AboutMe() {
   ];
 
   return (
-    <section className="h-screen">
+    <section>
       {/* Background */}
-      <div className="absolute w-full h-fit flex items-center justify-center">
-        <img src="./Backgrounds/purpledots.png" />
+      <div className="absolute w-full flex items-center justify-center">
+        <img src="./Backgrounds/purpledots.png" className="h-[150%]" />
       </div>
 
       {/* Title */}
@@ -66,7 +66,7 @@ export default function AboutMe() {
         </div>
       </div>
 
-      {/* Stack */}
+      {/* Stack  Rows */}
       <div className="space-y-[32px] mt-[32px]">
         <div className="flex justify-center gap-40">
           <StackRow text={"Front End"} stack={front} />
