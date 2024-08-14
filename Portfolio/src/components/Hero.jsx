@@ -1,4 +1,5 @@
 import "./utils/hero.css";
+import "./utils/button.css";
 
 export default function Hero() {
   return (
@@ -24,6 +25,13 @@ export default function Hero() {
             Solutions <span className="text-primary_green">Together</span>
             <span className="text-primary_purple">.</span>
           </div>
+        </div>
+
+        {/* Get In Touch Button */}
+        <div
+          className={`gradient-border font-robot font-black hover:cursor-pointer text-[28px] hover:text-primary_green transition-colors duration-300`}
+        >
+          Get in Touch.
         </div>
 
         {/* Background */}
