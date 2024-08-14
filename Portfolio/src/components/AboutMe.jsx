@@ -28,7 +28,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <section>
+    <section id="ABOUT ME">
       {/* Background */}
       <div className="absolute w-full flex items-center justify-center">
         <img src="./Backgrounds/purpledots.png" className="h-[150%]" />

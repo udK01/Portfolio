@@ -15,7 +15,6 @@ export default function App() {
       <SideBar />
       <Hero />
       <AboutMe />
-      {/* <Stack /> */}
       <Projects />
       <Experiences />
       <Contact />

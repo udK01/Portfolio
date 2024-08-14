@@ -3,7 +3,7 @@ import "./utils/button.css";
 
 export default function Hero() {
   return (
-    <section id="ABOUT ME">
+    <section id="HERO">
       <div className="flex flex-col justify-center items-center w-full h-screen space-y-20">
         {/* Name & Occupation */}
         <div className="font-robot font-black text-[80px] z-10 rise-up-0 opacity-0">
