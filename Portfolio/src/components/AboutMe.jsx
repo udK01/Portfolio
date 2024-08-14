@@ -5,6 +5,11 @@ import "./utils/aboutme.css";
 export default function AboutMe() {
   return (
     <section className="h-screen">
+      {/* Background */}
+      <div className="absolute w-full h-fit flex items-center justify-center">
+        <img src="./Backgrounds/purpledots.png" />
+      </div>
+
       {/* Title */}
       <div className="w-full flex justify-center scroll_animate mb-[150px]">
         <TextBar text={"ABOUT ME"} shadow={"bottom_right_green"} />
@@ -33,6 +38,9 @@ export default function AboutMe() {
           enthusiasm and dedication to every task.
         </div>
       </div>
+
+      {/* Stack */}
+      <div></div>
     </section>
   );
 }
