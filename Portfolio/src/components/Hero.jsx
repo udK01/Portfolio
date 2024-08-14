@@ -6,7 +6,7 @@ export default function Hero() {
     <section id="ABOUT ME">
       <div className="flex flex-col justify-center items-center w-full h-screen space-y-20">
         {/* Name & Occupation */}
-        <div className="font-robot font-black text-[80px] z-10">
+        <div className="font-robot font-black text-[80px] z-10 rise-up-0 opacity-0">
           <div className="text-white">Dominik Muranyi</div>
           <div className="flex pl-5 items-center -mt-[30px]">
             <div className="size-[40px] border-l-2 border-b-2 border-primary_purple -mt-[30px] mr-[10px]" />
@@ -15,7 +15,7 @@ export default function Hero() {
         </div>
 
         {/* "Slogan" */}
-        <div className="font-robot font-semibold text-[32px] z-10 flex flex-col items-center">
+        <div className="font-robot font-semibold text-[32px] z-10 flex flex-col items-center rise-up-1 opacity-0 -mt-[400px]">
           <div className="text-white">
             Turning Ideas into Digital Realities
             <span className="text-primary_purple">,</span>
@@ -29,7 +29,7 @@ export default function Hero() {
 
         {/* Get In Touch Button */}
         <div
-          className={`gradient-border font-robot font-black hover:cursor-pointer text-[28px] hover:text-primary_green transition-colors duration-300`}
+          className={`gradient-border font-robot font-black hover:cursor-pointer text-[28px] hover:text-primary_green transition-colors duration-300 rise-up-2 opacity-0`}
         >
           Get in Touch.
         </div>

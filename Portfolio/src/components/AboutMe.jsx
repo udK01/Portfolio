@@ -1,5 +1,7 @@
 import TextBar from "./TextBar";
 
+import "./utils/aboutme.css";
+
 export default function AboutMe() {
   return (
     <section className="h-screen">

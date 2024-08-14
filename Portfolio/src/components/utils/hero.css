@@ -8,8 +8,33 @@
   }
 }
 
+@keyframes rise-up {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .circular-reveal {
   animation: expand 1.25s ease-in-out forwards;
   animation-delay: 1s;
   clip-path: circle(0% at 50% 50%);
+}
+
+.rise-up-0 {
+  animation: rise-up 0.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.rise-up-1 {
+  animation: rise-up 0.5s ease-in-out forwards;
+  animation-delay: 1.25s;
+}
+
+.rise-up-2 {
+  animation: rise-up 0.5s ease-in-out forwards;
+  animation-delay: 1.5s;
 }
