@@ -12,16 +12,14 @@ export default function App() {
   return (
     <section className="bg-primary_gray">
       <Navbar />
-      <SideBar />
+      {/* <SideBar /> */}
       <div className="space-y-[150px]">
         <Hero />
         <AboutMe />
         <Projects />
         <Contact />
       </div>
-
       <Footer />
-      <ScrollButton />
     </section>
   );
 }

@@ -2,3 +2,19 @@
   scrollbar-width: thin;
   scrollbar-color: #9747ff transparent;
 }
+
+.repeat_green_dots {
+  background-image: url("/Backgrounds/greendot.png");
+  background-repeat: repeat;
+  background-size: 2% !important;
+}
+
+.radial_gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 65% 90% at center,
+    transparent 10%,
+    #181414 70%
+  );
+}

@@ -31,6 +31,7 @@ export default function AboutMe() {
     <section id="ABOUT ME" className="relative">
       {/* Background */}
       <div className="absolute w-full h-full z-0 overflow-hidden">
+        <div className="absolute w-[20%] h-[16%] repeat_purple_dots translate-y-[100px] translate-x-[100px]" />
         <div className="absolute w-[15%] h-[30%] repeat_purple_dots translate-y-[400px] translate-x-[1400px]" />
         <div className="absolute w-[10%] h-[20%] repeat_green_dots translate-y-[700px] translate-x-[300px]" />
       </div>
