@@ -12,8 +12,12 @@ export default function Footer() {
       <div className="flex gap-[50px] z-10">
         <CiMail className={style} title="dominik.muranyi@gmail.com" />
         <FaDiscord className={style} title="udKay" />
-        <FaLinkedin className={style} title="Dominik Muranyi" />
-        <FaGithub className={style} title="udK01" />
+        <a href="https://www.linkedin.com/in/dominik-muranyi-07931827b/">
+          <FaLinkedin className={style} title="Dominik Muranyi" />
+        </a>
+        <a href="https://github.com/udK01">
+          <FaGithub className={style} title="udK01" />
+        </a>
       </div>
       <div className="absolute w-full h-[1px] bg-gradient-to-r from-primary_green to-primary_purple" />
     </div>
