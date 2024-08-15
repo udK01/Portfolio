@@ -4,7 +4,7 @@ import "./utils/contact.css";
 
 export default function Contact() {
   const inputStyle =
-    "w-[80%] bg-transparent focus:outline-none text-white font-poppins font-extralight text-[30px] pl-3 border-l-2 border-b-2 border-primary_purple";
+    "w-[80%] bg-transparent caret-primary_green focus:outline-none text-white font-poppins font-extralight text-[30px] pl-3 border-l-2 border-b-2 border-primary_purple";
 
   return (
     <section
@@ -16,7 +16,12 @@ export default function Contact() {
       </div>
 
       <div className="flex justify-center">
-        <div className="flex flex-col items-center justify-center w-[670px] h-[750px] bg-[#131010] p-5 space-y-[50px]">
+        <div
+          className="flex flex-col items-center justify-center w-[670px] h-[750px] bg-[#131010] p-5 space-y-[50px]"
+          style={{
+            boxShadow: "4px 4px 15px 3px #4CFFB4, -4px -4px 15px 3px #9747FF",
+          }}
+        >
           <input placeholder={"Enter Your Name"} className={inputStyle} />
           <input placeholder={"Enter Your Email"} className={inputStyle} />
           <textarea
