@@ -28,51 +28,56 @@ export default function AboutMe() {
   ];
 
   return (
-    <section id="ABOUT ME">
+    <section id="ABOUT ME" className="relative">
       {/* Background */}
-      <div className="absolute w-full flex items-center justify-center">
-        <img src="./Backgrounds/purpledots.png" className="h-[150%]" />
+      <div className="absolute w-full h-full z-0 overflow-hidden">
+        <div className="absolute w-[15%] h-[30%] repeat_purple_dots translate-y-[400px] translate-x-[1400px]" />
+        <div className="absolute w-[10%] h-[20%] repeat_green_dots translate-y-[700px] translate-x-[300px]" />
       </div>
 
-      {/* Title */}
-      <div className="w-full flex justify-center scroll_animate mb-[150px]">
-        <TextBar text={"ABOUT ME"} shadow={"bottom_right_green"} />
-      </div>
-
-      {/* Sub-Title */}
-      <div className="font-robot font-black text-[60px] text-primary_green ml-[20%] z-50 scroll_animate">
-        Who am I?
-      </div>
-
-      {/* Paragraphs */}
-      <div className="w-[60%] mx-auto font-poppins text-white text-[30px]">
-        <div className="scroll_animate mb-10">
-          I am a motivated and versatile individual with a{" "}
-          <span className="text-primary_green">passion for learning</span> and
-          delivering high-quality results. Eager to take on new challenges, I
-          approach every project with a positive attitude and a{" "}
-          <span className="text-primary_green">growth mindset</span>, always
-          striving to make meaningful contributions.
+      <div className="space-y-[150px]">
+        {/* Title */}
+        <div className="w-full flex justify-center scroll_animate mb-[150px] z-20 relative">
+          <TextBar text={"ABOUT ME"} shadow={"bottom_right_green"} />
         </div>
-        <div className="scroll_animate">
-          Although I may currently lack extensive professional experience, I’ve
-          had valuable opportunities to{" "}
-          <span className="text-primary_green">collaborate with teams</span> and
-          contribute to impactful projects. I am ready to{" "}
-          <span className="text-primary_green">learn</span>,{" "}
-          <span className="text-primary_green">adapt</span>, and{" "}
-          <span className="text-primary_green">grow</span>, bringing my
-          enthusiasm and dedication to every task.
-        </div>
-      </div>
 
-      {/* Stack  Rows */}
-      <div className="space-y-[32px] mt-[32px]">
-        <div className="flex justify-center gap-40">
-          <StackRow text={"Front End"} stack={front} />
-          <StackRow text={"Back End"} stack={back} />
+        <div>
+          {/* Sub-Title */}
+          <div className="font-robot font-black text-[60px] text-primary_green ml-[20%] z-20 relative scroll_animate">
+            Who am I?
+          </div>
+
+          {/* Paragraphs */}
+          <div className="w-[60%] mx-auto font-poppins text-white text-[30px] relative z-20">
+            <div className="scroll_animate mb-10">
+              I am a motivated and versatile individual with a{" "}
+              <span className="text-primary_green">passion for learning</span>{" "}
+              and delivering high-quality results. Eager to take on new
+              challenges, I approach every project with a positive attitude and
+              a <span className="text-primary_green">growth mindset</span>,
+              always striving to make meaningful contributions.
+            </div>
+            <div className="scroll_animate">
+              Although I may currently lack extensive professional experience,
+              I’ve had valuable opportunities to{" "}
+              <span className="text-primary_green">collaborate with teams</span>{" "}
+              and contribute to impactful projects. I am ready to{" "}
+              <span className="text-primary_green">learn</span>,{" "}
+              <span className="text-primary_green">adapt</span>, and{" "}
+              <span className="text-primary_green">grow</span>, bringing my
+              enthusiasm and dedication to every task.
+            </div>
+          </div>
         </div>
-        <StackRow text={"Others"} stack={other} />
+
+        {/* Stack  Rows */}
+        <div className="space-y-[32px] mt-[32px] relative z-20">
+          <div className="flex justify-center gap-40">
+            <StackRow text={"Front End"} stack={front} />
+            <StackRow text={"Back End"} stack={back} />
+          </div>
+          <StackRow text={"Others"} stack={other} />
+        </div>
       </div>
     </section>
   );

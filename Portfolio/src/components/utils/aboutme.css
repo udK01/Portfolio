@@ -1,0 +1,11 @@
+.repeat_purple_dots {
+  background-image: url("/Backgrounds/purpledot.png");
+  background-repeat: repeat;
+  background-size: 15%;
+}
+
+.repeat_green_dots {
+  background-image: url("/Backgrounds/greendot.png");
+  background-repeat: repeat;
+  background-size: 15%;
+}

@@ -22,13 +22,3 @@
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
-
-.radial_gradient {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse 65% 55% at center,
-    transparent 10%,
-    #181414 70%
-  );
-}
