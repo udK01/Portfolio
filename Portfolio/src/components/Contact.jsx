@@ -11,11 +11,13 @@ export default function Contact() {
       id="CONTACT"
       className="flex flex-col justify-center space-y-[150px]"
     >
-      <div className="w-full flex justify-center scroll_animate">
+      {/* Title */}
+      <div className="w-full flex justify-center z-20 scroll_animate">
         <TextBar text={"CONTACT"} shadow={"top_left_green"} extra={"z-20"} />
       </div>
 
-      <div className="flex justify-center">
+      {/* Form */}
+      <div className="flex justify-center z-20">
         <div
           className="flex flex-col items-center justify-center w-[670px] h-[750px] bg-[#131010] p-5 space-y-[50px]"
           style={{
@@ -35,6 +37,11 @@ export default function Contact() {
             Send.
           </div>
         </div>
+      </div>
+
+      <div className="absolute w-full h-full flex justify-center items-center">
+        <img src="./Backgrounds/greendots.png" className="h-full" />
+        <div className="radial_gradient z-10" />
       </div>
     </section>
   );

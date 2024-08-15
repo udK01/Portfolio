@@ -22,3 +22,8 @@
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
+
+.radial_gradient {
+  @apply absolute inset-0;
+  background: radial-gradient(circle, transparent 30%, #181414 70%);
+}
