@@ -1,5 +1,7 @@
 import TextBar from "./TextBar";
 
+import "./utils/contact.css";
+
 export default function Contact() {
   const inputStyle =
     "w-[80%] bg-transparent focus:outline-none text-white font-poppins font-extralight text-[30px] pl-3 border-l-2 border-b-2 border-primary_purple";
@@ -19,8 +21,9 @@ export default function Contact() {
           <input placeholder={"Enter Your Email"} className={inputStyle} />
           <textarea
             placeholder={"Enter Your Message"}
-            className={`${inputStyle} max-h-[200px]`}
+            className={`${inputStyle} max-h-[200px] min-h-[50px] custom_scroll_wheel`}
           />
+
           <div
             className={`gradient-border w-fit px-20 font-robot font-black hover:cursor-pointer text-[28px] hover:text-primary_green`}
           >
