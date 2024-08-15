@@ -58,3 +58,19 @@
   transform: scale(0.95);
   transition: opacity 500ms, transform 500ms;
 }
+
+.repeat_diamonds {
+  background-image: url("/Backgrounds/diamond.png");
+  background-repeat: repeat;
+  background-size: 8%;
+}
+
+.radial_gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 65% 65% at center,
+    transparent 10%,
+    #181414 70%
+  );
+}

@@ -13,10 +13,13 @@ export default function App() {
     <section className="bg-primary_gray">
       <Navbar />
       <SideBar />
-      <Hero />
-      <AboutMe />
-      <Projects />
-      <Contact />
+      <div className="space-y-[150px]">
+        <Hero />
+        <AboutMe />
+        <Projects />
+        <Contact />
+      </div>
+
       <Footer />
       <ScrollButton />
     </section>

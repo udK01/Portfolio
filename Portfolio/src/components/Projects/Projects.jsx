@@ -66,23 +66,15 @@ export default function Projects() {
   return (
     <section
       id="PROJECTS"
-      className={`${
-        selectedProject === null ? "h-screen" : "h-full"
-      } flex flex-col justify-center`}
+      className={`h-screen flex flex-col justify-center space-y-[150px]`}
     >
       {/* Title */}
-      <div className="w-full flex justify-center mb-[150px] scroll_animate">
+      <div className="w-full flex justify-center scroll_animate">
         <TextBar
           text={"PROJECTS"}
           shadow={"bottom_right_purple"}
           extra={"z-20"}
         />
-      </div>
-
-      {/* Background Diamonds */}
-      <div className="w-full h-full absolute flex justify-center items-center">
-        <img src="./Backgrounds/diamonds.png" className="h-[90%]" />
-        <div className="radial_gradient z-10" />
       </div>
 
       {/* Cards */}
@@ -117,6 +109,12 @@ export default function Projects() {
             </CSSTransition>
           )}
         </TransitionGroup>
+      </div>
+
+      {/* Background Diamonds */}
+      <div className={`w-full h-full absolute flex justify-center`}>
+        <div className="w-full h-full repeat_diamonds opacity-35" />
+        <div className="radial_gradient" />
       </div>
     </section>
   );
