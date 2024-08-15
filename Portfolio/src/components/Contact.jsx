@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="CONTACT"
-      className="flex flex-col justify-center space-y-[150px] pb-[150px]"
+      className="flex flex-col justify-center space-y-[150px]"
     >
       <div className="w-full flex justify-center scroll_animate">
         <TextBar text={"CONTACT"} shadow={"top_left_green"} extra={"z-20"} />

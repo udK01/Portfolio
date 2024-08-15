@@ -5,6 +5,7 @@ import SideBar from "./components/SideBar";
 import Contact from "./components/Contact";
 import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <AboutMe />
       <Projects />
       <Contact />
+      <Footer />
       <ScrollButton />
     </section>
   );
