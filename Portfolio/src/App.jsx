@@ -1,6 +1,5 @@
 import Projects from "./components/Projects/Projects";
 import ScrollButton from "./components/ScrollButton";
-import Experiences from "./components/Experiences";
 import Stack from "./components/Stack/Stack";
 import SideBar from "./components/SideBar";
 import Contact from "./components/Contact";
@@ -16,7 +15,6 @@ export default function App() {
       <Hero />
       <AboutMe />
       <Projects />
-      <Experiences />
       <Contact />
       <ScrollButton />
     </section>
