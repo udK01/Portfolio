@@ -78,7 +78,7 @@ export default function Projects() {
       </div>
 
       {/* Cards */}
-      <div ref={cardsRef} className="w-full h-full z-10 scroll_animate">
+      <div ref={cardsRef} className="w-full h-full z-10 scroll_animate ">
         <TransitionGroup>
           {selectedProject === null ? (
             <CSSTransition key="project-list" classNames="fade" timeout={500}>

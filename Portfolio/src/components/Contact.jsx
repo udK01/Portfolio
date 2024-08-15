@@ -39,7 +39,7 @@ export default function Contact() {
       </div>
 
       <div className="absolute w-full h-full flex justify-center items-center overflow-hidden">
-        <div className="w-full h-full repeat_green_dots opacity-35" />
+        <div className="w-full h-full repeat_green_dots_2 opacity-35" />
         <div className="w-full h-full radial_gradient" />
       </div>
     </section>
