@@ -24,6 +24,11 @@
 }
 
 .radial_gradient {
-  @apply absolute inset-0;
-  background: radial-gradient(circle, transparent 30%, #181414 70%);
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 65% 55% at center,
+    transparent 10%,
+    #181414 70%
+  );
 }

@@ -71,7 +71,7 @@ export default function Projects() {
       } flex flex-col justify-center`}
     >
       {/* Title */}
-      <div className="w-full flex justify-center my-[150px] scroll_animate">
+      <div className="w-full flex justify-center mb-[150px] scroll_animate">
         <TextBar
           text={"PROJECTS"}
           shadow={"bottom_right_purple"}
@@ -81,10 +81,8 @@ export default function Projects() {
 
       {/* Background Diamonds */}
       <div className="w-full h-full absolute flex justify-center items-center">
-        <img
-          src="./Backgrounds/diamonds.png"
-          className="h-[90%] translate-y-[125px]"
-        />
+        <img src="./Backgrounds/diamonds.png" className="h-[90%]" />
+        <div className="radial_gradient z-10" />
       </div>
 
       {/* Cards */}

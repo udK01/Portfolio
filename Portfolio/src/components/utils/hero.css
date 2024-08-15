@@ -38,3 +38,9 @@
   animation: rise-up 0.5s ease-in-out forwards;
   animation-delay: 1.5s;
 }
+
+.repeat_squares {
+  background-image: url("/Backgrounds/square.png");
+  background-repeat: repeat;
+  background-size: 8%;
+}

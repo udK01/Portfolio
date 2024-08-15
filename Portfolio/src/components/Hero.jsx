@@ -35,11 +35,9 @@ export default function Hero() {
         </div>
 
         {/* Background */}
-        <div className="absolute w-full h-full flex items-center justify-center mt-[140px] opacity-0 circular-reveal">
-          <img
-            src="./Backgrounds/squarebackground.png"
-            className="w-[85%] h-[85%] absolute"
-          />
+        <div className="absolute w-full h-full flex items-center justify-center opacity-0 circular-reveal">
+          <div className="w-full h-full repeat_squares opacity-35" />
+          <div className="w-full h-full radial_gradient z-10" />
         </div>
       </div>
     </section>
