@@ -12,6 +12,15 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         robot: ["Roboto", "sans-serif"],
       },
+      screens: {
+        "2xs": "320px",
+        xs: "480px",
+        sm: "620px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1200px",
+        "2xl": "1700px",
+      },
       boxShadow: {
         top_left_purple: "-10px -10px 0 #9747FF",
         top_right_purple: "10px -10px 0 #9747FF",
