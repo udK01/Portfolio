@@ -6,7 +6,7 @@
 .repeat_green_dots_2 {
   background-image: url("/Backgrounds/greendot.png");
   background-repeat: repeat;
-  background-size: 2% !important;
+  background-size: 2%;
 }
 
 .radial_gradient {
