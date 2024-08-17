@@ -96,7 +96,7 @@ export default function Navbar() {
         </div>
       </div>
       {showMenu && (
-        <div className="h-screen w-full flex flex-col font-poppins p-5 text-[40px] space-y-20 mt-20 text-white items-center right-0 bg-primary_gray">
+        <div className="h-screen w-full flex flex-col font-poppins p-5 text-[40px] space-y-20 mt-20 text-white font-black items-center right-0 bg-primary_gray">
           {menuItems.map((item, index) => (
             <p
               key={index}
@@ -109,7 +109,7 @@ export default function Navbar() {
               {item}
             </p>
           ))}
-          <p>Resume.</p>
+          <p className="resume-border px-20 bg-primary_gray">Resume.</p>
         </div>
       )}
     </div>
