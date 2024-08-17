@@ -58,57 +58,60 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full flex items-center bg-primary_gray h-[117px] navbar-move z-40">
-      {/* Laptop & Desktop */}
-      <div className="justify-between w-full items-center 2xs:hidden lg:flex">
-        <img src="./logo.png" className="w-[108px] h-[64px] ml-[32px]" />
-        <div className="flex text-[#7E7E7E] font-medium gap-20 font-poppins text-[25px]">
+    <div className="flex flex-col">
+      <div className="w-full flex items-center bg-primary_gray h-[117px] navbar-move z-40">
+        {/* Laptop & Desktop */}
+        <div className="justify-between w-full items-center 2xs:hidden lg:flex">
+          <img src="./logo.png" className="w-[108px] h-[64px] ml-[32px]" />
+          <div className="flex text-[#7E7E7E] font-medium gap-20 font-poppins text-[25px]">
+            {menuItems.map((item, index) => (
+              <p
+                key={index}
+                onClick={() => handleScroll(item)}
+                className={`hover:cursor-pointer hover:text-primary_green transition-all duration-300 ${
+                  highlight === index ? "text-primary_green" : ""
+                }`}
+              >
+                {item}
+              </p>
+            ))}
+          </div>
+          <div
+            className={`resume-border font-robot font-black hover:cursor-pointer text-[20px] hover:text-primary_green transition-colors duration-300 mr-[32px]`}
+          >
+            Resume.
+          </div>
+        </div>
+        {/* Phone & Tablet */}
+        <div className="justify-between w-full items-center 2xs:flex lg:hidden">
+          <img src="./logo.png" className="w-[108px] h-[64px] mx-[32px]" />
+          <div className="flex flex-col items-center">
+            <FiAlignJustify
+              size={48}
+              color="white"
+              className="mx-[32px]"
+              onClick={() => setShowMenu(!showMenu)}
+            />
+          </div>
+        </div>
+      </div>
+      {showMenu && (
+        <div className="h-screen w-full flex flex-col font-poppins p-5 text-[40px] space-y-20 mt-20 text-white items-center right-0 bg-primary_gray">
           {menuItems.map((item, index) => (
             <p
               key={index}
-              onClick={() => handleScroll(item)}
-              className={`hover:cursor-pointer hover:text-primary_green transition-all duration-300 ${
-                highlight === index ? "text-primary_green" : ""
-              }`}
+              onClick={() => {
+                handleScroll(item);
+                setShowMenu(false);
+              }}
+              className={`${highlight === index && "text-primary_green"}`}
             >
               {item}
             </p>
           ))}
+          <p>Resume.</p>
         </div>
-        <div
-          className={`resume-border font-robot font-black hover:cursor-pointer text-[20px] hover:text-primary_green transition-colors duration-300 mr-[32px]`}
-        >
-          Resume.
-        </div>
-      </div>
-      {/* Phone & Tablet */}
-      <div className="justify-between w-full items-center 2xs:flex lg:hidden">
-        <img src="./logo.png" className="w-[108px] h-[64px] mx-[32px]" />
-        <div className="flex flex-col">
-          <FiAlignJustify
-            size={48}
-            color="white"
-            className="mx-[32px]"
-            onClick={() => setShowMenu(!showMenu)}
-          />
-          {showMenu && (
-            <div className="absolute flex flex-col font-poppins p-5 text-[20px] space-y-10 text-white items-center right-0 z-20 bg-primary_gray">
-              {menuItems.map((item, index) => (
-                <p
-                  key={index}
-                  onClick={() => handleScroll(item)}
-                  className={`hover:cursor-pointer hover:text-primary_green transition-all duration-300 ${
-                    highlight === index ? "text-primary_green" : ""
-                  }`}
-                >
-                  {item}
-                </p>
-              ))}
-              <p>Resume.</p>
-            </div>
-          )}
-        </div>
-      </div>
+      )}
     </div>
   );
 }
