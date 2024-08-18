@@ -15,8 +15,8 @@ export default function App() {
       {/* <SideBar /> */}
       <div className="space-y-[150px]">
         <Hero />
-        {/* <AboutMe />
-        <Projects />
+        <AboutMe />
+        {/* <Projects />
         <Contact /> */}
       </div>
       {/* <Footer /> */}

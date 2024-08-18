@@ -4,7 +4,7 @@ import "./utils/button.css";
 export default function Hero() {
   return (
     <section id="HERO">
-      <div className="flex flex-col justify-center items-center w-full 2xs:h-[50vh] md:h-[90vh] lg:h-screen md:space-y-20 2xs:space-y-10">
+      <div className="flex flex-col justify-center items-center w-full 2xs:h-[65vh] md:h-[80vh] md:space-y-20 2xs:space-y-10">
         {/* Name & Occupation */}
         <div className="font-robot font-black lg:text-[80px] md:text-[60px] 2xs:text-[30px] z-10 rise-up-0 opacity-0">
           <div className="text-white">Dominik Muranyi</div>
@@ -35,9 +35,9 @@ export default function Hero() {
         </div>
 
         {/* Background */}
-        <div className="absolute w-full 2xs:h-[50vh] md:h-[90vh] lg:h-full opacity-0 circular-reveal pb-[150px]">
-          <div className="w-full 2xs:h-[45vh] md:h-[85vh] lg:h-full repeat_squares opacity-35" />
-          <div className="w-full 2xs:h-[45vh] md:h-[85vh] lg:h-full radial_gradient z-10" />
+        <div className="absolute w-full 2xs:h-[50vh] md:h-[80vh] opacity-0 circular-reveal pb-[150px]">
+          <div className="w-full 2xs:h-[45vh] md:h-[75vh] repeat_squares opacity-35" />
+          <div className="w-full 2xs:h-[45vh] md:h-[75vh] radial_gradient z-10" />
         </div>
       </div>
     </section>
