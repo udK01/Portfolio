@@ -13,12 +13,12 @@ export default function App() {
     <section className="bg-primary_gray">
       <Navbar />
       {/* <SideBar /> */}
-      {/* <div className="space-y-[150px]">
+      <div className="space-y-[150px]">
         <Hero />
-        <AboutMe />
+        {/* <AboutMe />
         <Projects />
-        <Contact />
-      </div> */}
+        <Contact /> */}
+      </div>
       {/* <Footer /> */}
     </section>
   );
