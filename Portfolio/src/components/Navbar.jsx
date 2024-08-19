@@ -59,7 +59,7 @@ export default function Navbar() {
 
   return (
     <div className="flex flex-col">
-      <div className="w-full flex items-center bg-primary_gray h-[117px] navbar-move z-40">
+      <div className="w-full fixed flex items-center bg-primary_gray h-[117px] navbar-move z-40">
         {/* Laptop & Desktop */}
         <div className="justify-between w-full items-center 2xs:hidden lg:flex">
           <img src="./logo.png" className="w-[108px] h-[64px] ml-[32px]" />
