@@ -5,6 +5,8 @@ import ProjectOverview from "./ProjectOverview";
 import ProjectCard from "./ProjectCard";
 import TextBar from "../TextBar";
 
+import "../utils/projects.css";
+
 export default function Projects() {
   const projects = [
     { id: 1, src: "./Projects/project1.png" },
@@ -112,10 +114,12 @@ export default function Projects() {
       </div>
 
       {/* Background Diamonds */}
-      {/* <div className={`w-full h-full absolute flex justify-center`}>
+      <div
+        className={`w-full h-full absolute flex justify-center -translate-y-[100px]`}
+      >
         <div className="w-full h-full repeat_diamonds opacity-35" />
-        <div className="radial_gradient" />
-      </div> */}
+        <div className="radial_gradient4" />
+      </div>
     </section>
   );
 }

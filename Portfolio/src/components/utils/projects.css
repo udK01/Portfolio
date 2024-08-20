@@ -65,11 +65,11 @@
   background-size: 8%;
 }
 
-.radial_gradient {
+.radial_gradient4 {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse 65% 55% at center,
+    ellipse 65% 70% at center,
     transparent 10%,
     #181414 70%
   );
