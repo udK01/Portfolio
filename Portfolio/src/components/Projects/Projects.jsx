@@ -18,55 +18,55 @@ export default function Projects() {
   const overviewRef = useRef(null);
   const cardsRef = useRef(null);
 
-  useEffect(() => {
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (selectedProject !== null && overviewRef.current) {
-            overviewRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-              inline: "nearest",
-            });
-          } else if (cardsRef.current) {
-            cardsRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "end",
-              inline: "nearest",
-            });
-          }
-        }
-      });
-    };
+  // useEffect(() => {
+  //   const observerCallback = (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         if (selectedProject !== null && overviewRef.current) {
+  //           overviewRef.current.scrollIntoView({
+  //             behavior: "smooth",
+  //             block: "center",
+  //             inline: "nearest",
+  //           });
+  //         } else if (cardsRef.current) {
+  //           cardsRef.current.scrollIntoView({
+  //             behavior: "smooth",
+  //             block: "end",
+  //             inline: "nearest",
+  //           });
+  //         }
+  //       }
+  //     });
+  //   };
 
-    const observerOptions = {
-      root: null,
-      rootMargin: "-300px 0px -300px 0px",
-      threshold: 0.1,
-    };
+  //   const observerOptions = {
+  //     root: null,
+  //     rootMargin: "-300px 0px -300px 0px",
+  //     threshold: 0.1,
+  //   };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+  //   const observer = new IntersectionObserver(
+  //     observerCallback,
+  //     observerOptions
+  //   );
 
-    const element = document.getElementById("PROJECTS");
+  //   const element = document.getElementById("PROJECTS");
 
-    if (element) {
-      observer.observe(element);
-    }
+  //   if (element) {
+  //     observer.observe(element);
+  //   }
 
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, [selectedProject]);
+  //   return () => {
+  //     if (element) {
+  //       observer.unobserve(element);
+  //     }
+  //   };
+  // }, [selectedProject]);
 
   return (
     <section
       id="PROJECTS"
-      className={`h-screen flex flex-col justify-center space-y-[150px]`}
+      className={`flex flex-col justify-center lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px]`}
     >
       {/* Title */}
       <div className="w-full flex justify-center scroll_animate">
