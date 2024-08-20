@@ -30,11 +30,11 @@ export default function AboutMe() {
   return (
     <section id="ABOUT ME" className="relative">
       {/* Background */}
-      <div className="absolute w-full h-full z-0 overflow-hidden">
+      {/* <div className="absolute w-full h-full z-0 overflow-hidden">
         <div className="absolute w-[20%] h-[16%] repeat_purple_dots translate-y-[100px] translate-x-[100px]" />
         <div className="absolute w-[15%] h-[30%] repeat_purple_dots translate-y-[400px] translate-x-[1400px]" />
         <div className="absolute w-[10%] h-[20%] repeat_green_dots_1 translate-y-[700px] translate-x-[300px]" />
-      </div>
+      </div> */}
 
       <div className="space-y-[150px]">
         {/* Title */}
@@ -44,12 +44,12 @@ export default function AboutMe() {
 
         <div>
           {/* Sub-Title */}
-          <div className="font-robot font-black text-[60px] text-primary_green ml-[20%] z-20 relative scroll_animate">
+          <div className="font-robot font-black text-[60px] md:text-[50px] text-primary_green ml-[20%] z-20 relative scroll_animate">
             Who am I?
           </div>
 
           {/* Paragraphs */}
-          <div className="w-[60%] mx-auto font-poppins text-white text-[30px] relative z-20">
+          <div className="w-[60%] mx-auto font-poppins text-white xl:text-[30px] lg:text-[26px] md:text-[22px] relative z-20">
             <div className="scroll_animate mb-10">
               I am a motivated and versatile individual with a{" "}
               <span className="text-primary_green">passion for learning</span>{" "}
@@ -73,7 +73,7 @@ export default function AboutMe() {
 
         {/* Stack  Rows */}
         <div className="space-y-[32px] mt-[32px] relative z-20">
-          <div className="flex justify-center gap-40">
+          <div className="flex lg:flex-row 2xs:flex-col 2xs:space-y-[32px] lg:space-y-0 justify-center xl:gap-40 lg:gap-20">
             <StackRow text={"Front End"} stack={front} />
             <StackRow text={"Back End"} stack={back} />
           </div>
