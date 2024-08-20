@@ -82,7 +82,7 @@ export default function Projects() {
         <TransitionGroup>
           {selectedProject === null ? (
             <CSSTransition key="project-list" classNames="fade" timeout={500}>
-              <div className="w-full flex justify-center gap-10 overflow-hidden">
+              <div className="w-full flex flex-wrap justify-center lg:gap-10 2xs:gap-5 overflow-hidden">
                 {projects.map((project) => (
                   <div
                     key={project.id}
