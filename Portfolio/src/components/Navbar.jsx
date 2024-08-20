@@ -9,46 +9,46 @@ export default function Navbar() {
   const [highlight, setHighlight] = useState(-1);
   const [showMenu, setShowMenu] = useState(false);
 
-  // useEffect(() => {
-  //   const elements = items.map((item) =>
-  //     document.getElementById(item.toUpperCase())
-  //   );
+  useEffect(() => {
+    const elements = items.map((item) =>
+      document.getElementById(item.toUpperCase())
+    );
 
-  //   const observerCallback = (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         switch (entry.target.id) {
-  //           case "ABOUT ME":
-  //             setHighlight(0);
-  //             break;
-  //           case "PROJECTS":
-  //             setHighlight(1);
-  //             break;
-  //           case "CONTACT":
-  //             setHighlight(2);
-  //             break;
-  //           default:
-  //             setHighlight(-1);
-  //         }
-  //       }
-  //     });
-  //   };
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          switch (entry.target.id) {
+            case "ABOUT ME":
+              setHighlight(0);
+              break;
+            case "PROJECTS":
+              setHighlight(1);
+              break;
+            case "CONTACT":
+              setHighlight(2);
+              break;
+            default:
+              setHighlight(-1);
+          }
+        }
+      });
+    };
 
-  //   const observerOptions = {
-  //     rootMargin: "-500px 0px -500px 0px",
-  //   };
+    const observerOptions = {
+      rootMargin: "-500px 0px -500px 0px",
+    };
 
-  //   const observer = new IntersectionObserver(
-  //     observerCallback,
-  //     observerOptions
-  //   );
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
 
-  //   elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
 
-  //   return () => {
-  //     elements.forEach((el) => observer.unobserve(el));
-  //   };
-  // }, [menuItems]);
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, [menuItems]);
 
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId.toUpperCase());
