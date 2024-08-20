@@ -96,7 +96,7 @@ export default function Navbar() {
         </div>
       </div>
       {showMenu && (
-        <div className="h-screen w-full flex flex-col font-poppins p-5 text-[40px] space-y-20 mt-20 text-white font-black items-center right-0 bg-primary_gray">
+        <div className="fixed h-screen w-full flex flex-col font-poppins p-5 text-[40px] space-y-20 pt-40 text-white font-black items-center right-0 bg-primary_gray z-30">
           {menuItems.map((item, index) => (
             <p
               key={index}
