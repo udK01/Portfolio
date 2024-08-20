@@ -4,7 +4,7 @@ import { CiMail } from "react-icons/ci";
 
 export default function Footer() {
   const style =
-    "size-[60px] text-white bg-primary_gray hover:text-primary_purple hover:cursor-pointer transition-colors duration-300";
+    "xl:size-[60px] md:size-[50px] 2xs:size-[40px] text-white bg-primary_gray hover:text-primary_purple hover:cursor-pointer transition-colors duration-300";
 
   return (
     <div className="flex justify-center items-center h-[117px] mt-10 w-full">

@@ -17,9 +17,9 @@ export default function App() {
         <Hero />
         <AboutMe />
         <Projects />
-        <Contact />
+        {/* <Contact /> */}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </section>
   );
 }
