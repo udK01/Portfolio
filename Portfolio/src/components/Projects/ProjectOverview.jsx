@@ -263,13 +263,13 @@ export default function ProjectOverview({
   );
 
   return (
-    <div className="w-full flex justify-center gap-10 z-10">
+    <div className="w-full flex justify-center md:gap-10 2xs:gap-3 z-10">
       {/* Projects Sidebar */}
       <div className="flex flex-col space-y-[20px]">
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="size-[150px] hover:cursor-pointer transition-colors duration-500 border-2 border-primary_purple hover:border-primary_green"
+            className="md:size-[150px] 2xs:size-[100px] hover:cursor-pointer transition-colors duration-500 border-2 border-primary_purple hover:border-primary_green"
             onClick={() => setSelectedProject(project)}
           >
             <img
@@ -280,22 +280,22 @@ export default function ProjectOverview({
         ))}
       </div>
       {/* Select Project Image */}
-      <div className="w-[350px] h-[660px]">
+      <div className="w-[350px] h-[660px] 2xs:hidden xl:block">
         <img
           src={selectedProject.src}
           className="relative w-full h-full object-cover border-2 border-primary_purple"
         />
       </div>
       <div>
-        <div className="w-[674px] h-full max-h-[660px] flex flex-col justify-between">
+        <div className="lg:w-[674px] md:w-[500px] 2xs:w-[300px] h-full max-h-[660px] flex flex-col justify-between">
           <div className="flex flex-col space-y-[18px]">
             {/* Title and Close Button */}
             <div className="w-full flex justify-between items-center">
-              <div className="font-black font-robot text-[50px] text-white">
+              <div className="font-black font-robot lg:text-[50px] md:text-[40px] 2xs:text-[24px] text-white">
                 {selectedInfo[0].title}
               </div>
               <div
-                className="size-[50px] border-2 border-primary_purple rounded-full flex justify-center items-center transition-colors duration-300 hover:bg-primary_purple hover:cursor-pointer"
+                className="md:size-[50px] 2xs:size-[30px] border-2 border-primary_purple rounded-full flex justify-center items-center transition-colors duration-300 hover:bg-primary_purple hover:cursor-pointer"
                 onClick={() => setSelectedProject(null)}
               >
                 <IoMdClose className="size-[30px] text-white" />

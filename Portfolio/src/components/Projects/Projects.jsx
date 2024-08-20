@@ -66,7 +66,7 @@ export default function Projects() {
   return (
     <section
       id="PROJECTS"
-      className={`flex flex-col justify-center lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px]`}
+      className={`h-[110vh] flex flex-col justify-center lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px]`}
     >
       {/* Title */}
       <div className="w-full flex justify-center scroll_animate">
@@ -112,10 +112,10 @@ export default function Projects() {
       </div>
 
       {/* Background Diamonds */}
-      <div className={`w-full h-full absolute flex justify-center`}>
+      {/* <div className={`w-full h-full absolute flex justify-center`}>
         <div className="w-full h-full repeat_diamonds opacity-35" />
         <div className="radial_gradient" />
-      </div>
+      </div> */}
     </section>
   );
 }
