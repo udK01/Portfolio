@@ -36,9 +36,9 @@ export default function AboutMe() {
         <div className="absolute w-[10%] h-[20%] repeat_green_dots_1 translate-y-[700px] translate-x-[300px]" />
       </div> */}
 
-      <div className="space-y-[150px]">
+      <div className="lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px]">
         {/* Title */}
-        <div className="w-full flex justify-center scroll_animate mb-[150px] z-20 relative">
+        <div className="w-full flex justify-center scroll_animate z-20 relative">
           <TextBar text={"ABOUT ME"} shadow={"bottom_right_green"} />
         </div>
 
