@@ -54,3 +54,18 @@
     #181414 70%
   );
 }
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.65;
+  }
+}
+
+.fade-in {
+  animation: fade 1s linear forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}

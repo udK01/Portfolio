@@ -1,7 +1,27 @@
+import { useState, useEffect } from "react";
+
+import { FaAnglesDown } from "react-icons/fa6";
+
 import "./utils/hero.css";
 import "./utils/button.css";
 
 export default function Hero() {
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   function handleScroll() {
     const section = document.getElementById("CONTACT");
     if (section) {
@@ -47,34 +67,14 @@ export default function Hero() {
           <div className="w-full 2xs:h-[45vh] md:h-[75vh] repeat_squares opacity-35" />
           <div className="w-full 2xs:h-[45vh] md:h-[75vh] radial_gradient z-10" />
         </div>
+
+        {/* Scroll Button */}
+        {isAtTop && (
+          <div className="fade-in">
+            <FaAnglesDown className="animate-bounce absolute bottom-[50px] size-12 text-white z-40 rounded-full p-2 border-2 border-primary_green" />
+          </div>
+        )}
       </div>
     </section>
   );
-}
-
-{
-  /* <div className="absolute z-10 w-full h-screen circular-reveal opacity-0 mt-10">
-          <Spline scene="https://prod.spline.design/Tr9fJ1rZOicDY-Y1/scene.splinecode" />
-        </div> */
-}
-
-{
-  /* <TextBar
-          text={"DOMINIK"}
-          shadow={"top_left_purple"}
-          direction={"left"}
-          extra={"-translate-x-[50px] z-10 opacity-0"}
-        />
-        <TextBar
-          text={"MURANYI"}
-          shadow={"bottom_right_green"}
-          direction={"right"}
-          extra={"translate-x-[25px] z-10 opacity-0"}
-        />
-        <TextBar
-          text={"DEVELOPER"}
-          shadow={"bottom_left_purple"}
-          direction={"left"}
-          extra={"-translate-x-[50px] z-10 opacity-0"}
-        /> */
 }
