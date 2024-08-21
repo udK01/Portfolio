@@ -25,3 +25,6 @@ dist-ssr
 
 # Videos
 *.mp4
+
+# Environment Files.
+*.env
