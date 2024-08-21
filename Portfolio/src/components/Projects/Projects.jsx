@@ -68,7 +68,7 @@ export default function Projects() {
   return (
     <section
       id="PROJECTS"
-      className={`h-[110vh] flex flex-col justify-center lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px]`}
+      className={`h-[100vh] flex flex-col justify-center md:space-y-[80px] 2xs:space-y-[60px]`}
     >
       {/* Title */}
       <div className="w-full flex justify-center scroll_animate">
@@ -84,15 +84,17 @@ export default function Projects() {
         <TransitionGroup>
           {selectedProject === null ? (
             <CSSTransition key="project-list" classNames="fade" timeout={500}>
-              <div className="w-full flex flex-wrap justify-center lg:gap-10 2xs:gap-5 overflow-hidden">
-                {projects.map((project) => (
-                  <div
-                    key={project.id}
-                    onClick={() => setSelectedProject(project)}
-                  >
-                    <ProjectCard src={project.src} />
-                  </div>
-                ))}
+              <div className="w-full flex justify-center">
+                <div className="xl:w-[48%] lg:w-[65%] md:w-[77%] flex flex-wrap justify-center lg:gap-10 2xs:gap-5 overflow-hidden">
+                  {projects.map((project) => (
+                    <div
+                      key={project.id}
+                      onClick={() => setSelectedProject(project)}
+                    >
+                      <ProjectCard src={project.src} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </CSSTransition>
           ) : (

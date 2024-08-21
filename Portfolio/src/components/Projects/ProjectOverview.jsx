@@ -269,7 +269,7 @@ export default function ProjectOverview({
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="md:size-[150px] 2xs:size-[100px] hover:cursor-pointer transition-colors duration-500 border-2 border-primary_purple hover:border-primary_green"
+            className="lg:size-[150px] md:size-[130px] 2xs:size-[100px] hover:cursor-pointer transition-colors duration-500 border-2 border-primary_purple hover:border-primary_green"
             onClick={() => setSelectedProject(project)}
           >
             <img

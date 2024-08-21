@@ -13,8 +13,8 @@ export default function App() {
     <section className="bg-primary_gray">
       <Navbar />
       {/* <SideBar /> */}
-      <div className="lg:space-y-[120px] 2xs:space-y-[90px]">
-        <Hero />
+      <Hero />
+      <div className="space-y-[120px]">
         <AboutMe />
         <Projects />
         <Contact />
