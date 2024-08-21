@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse 70% 90% at center,
+    ellipse 60% 60% at center,
     transparent 10%,
     #181414 70%
   );

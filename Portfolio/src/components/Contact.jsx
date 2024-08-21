@@ -45,7 +45,7 @@ export default function Contact() {
 
   return (
     <section id="CONTACT" className="flex flex-col justify-center">
-      <div className="lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px] z-20">
+      <div className="md:space-y-[90px] 2xs:space-y-[60px] z-20">
         {/* Title */}
         <div className="w-full h-full flex justify-center scroll_animate">
           <TextBar text={"CONTACT"} shadow={"top_left_green"} extra={"z-20"} />
@@ -58,7 +58,7 @@ export default function Contact() {
           onSubmit={(e) => sendEmail(e)}
         >
           <div
-            className="flex flex-col items-center justify-center md:w-[70vh] md:h-[80vh] 2xs:w-[40vh] 2xs:h-[60vh] bg-[#131010] p-5 space-y-[50px]"
+            className="flex flex-col items-center justify-center md:w-[50vh] 2xs:w-[40vh] h-[60vh] bg-[#131010] p-5 space-y-[50px]"
             style={{
               boxShadow: "4px 4px 15px 3px #4CFFB4, -4px -4px 15px 3px #9747FF",
             }}

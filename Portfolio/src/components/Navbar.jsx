@@ -55,7 +55,7 @@ export default function Navbar() {
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "center",
         inline: "nearest",
       });
     }
