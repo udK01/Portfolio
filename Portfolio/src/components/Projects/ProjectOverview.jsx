@@ -16,7 +16,7 @@ export default function ProjectOverview({
     {
       id: 1,
       title: "Laravel Blog Site",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      desc: "For my first website, I used Laravel, Livewire, and MySQL to build a Reddit-inspired blog where users can create, read, update, and delete posts. At this stage, I wasn't confident with JavaScript, so I didn't use any.",
       tools: [
         {
           icon: "./Icons/Docker.png",
@@ -60,7 +60,7 @@ export default function ProjectOverview({
     {
       id: 2,
       title: "Unity Upgraded Frogger",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      desc: "A game, inspired by 'Crossy Roads' and based on 'Frogger,' isn't a website-based project. However, I decided to include it to showcase my versatility, as it highlights my ability to learn and adapt to new languages and software.",
       tools: [
         {
           icon: "./Icons/Github.png",
@@ -92,7 +92,7 @@ export default function ProjectOverview({
     {
       id: 3,
       title: "Expense Tracker App",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      desc: "This project began as a JavaScript tutorial from YouTube but gradually became a personal project as I expanded on it. I started by adding different types of transactions, which eventually evolved into a system with multiple accounts.",
       tools: [
         {
           icon: "./Icons/Js.png",
@@ -142,7 +142,7 @@ export default function ProjectOverview({
     {
       id: 4,
       title: "Manga Site",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      desc: "This was my first major project involving routing in React, implementing different access levels, integrating a full back-end system, and making the site responsive across various devices.",
       tools: [
         {
           icon: "./Icons/Docker.png",
@@ -210,7 +210,7 @@ export default function ProjectOverview({
     {
       id: 5,
       title: "Scroll Animate Website",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quia est earum, doloribus odio molestiae dolor perspiciatis! Assumenda quos minus expedita, at enim dolorum, accusantium et vitae, deleniti amet libero.",
+      desc: "This project was brief and aimed at testing various animations, dividers, effects, and transitions using CSS and Tailwind. It also gave me the opportunity to learn about animations on scroll.",
       tools: [
         {
           icon: "./Icons/Html.png",
@@ -289,7 +289,7 @@ export default function ProjectOverview({
       </div>
       <div>
         <div className="lg:w-[674px] md:w-[500px] 2xs:w-[300px] h-full max-h-[660px] flex flex-col justify-between">
-          <div className="flex flex-col space-y-[18px]">
+          <div className="flex flex-col space-y-[18px] 2xs:h-full md:justify-normal 2xs:justify-between md:pb-0 2xs:pb-4">
             {/* Title and Close Button */}
             <div className="w-full flex justify-between items-center">
               <div className="font-black font-robot lg:text-[50px] md:text-[40px] 2xs:text-[24px] text-white">
@@ -309,7 +309,7 @@ export default function ProjectOverview({
               </div>
             </div>
             {/* Description */}
-            <div className="w-full text-white font-robot text-[20px] line-clamp-4">
+            <div className="w-full text-white font-robot md:text-[19px]">
               {selectedInfo[0].desc}
             </div>
             {/* Scroller */}

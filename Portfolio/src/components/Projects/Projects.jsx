@@ -24,13 +24,13 @@ export default function Projects() {
   const cardsRef = useRef(null);
   const overviewRef = useRef(null);
 
-  function changeToOverview() {
-    if (cardsRef.current && overviewRef.current) {
-      cardsRef.current.classList.toggle("hidden");
-      overviewRef.current.classList.toggle("hidden");
-      overviewRef.current.classList.add("fade");
-      cardsRef.current.classList.remove("fade");
-      overviewRef.current.scrollIntoView({
+  function toggleView(showRef, hideRef) {
+    if (showRef.current && hideRef.current) {
+      hideRef.current.classList.toggle("hidden");
+      showRef.current.classList.toggle("hidden");
+      showRef.current.classList.add("fade");
+      hideRef.current.classList.remove("fade");
+      showRef.current.scrollIntoView({
         behavior: "smooth",
         block: "center",
         inline: "nearest",
@@ -38,18 +38,12 @@ export default function Projects() {
     }
   }
 
+  function changeToOverview() {
+    toggleView(overviewRef, cardsRef);
+  }
+
   function changeToCards() {
-    if (cardsRef.current && overviewRef.current) {
-      overviewRef.current.classList.toggle("hidden");
-      cardsRef.current.classList.toggle("hidden");
-      cardsRef.current.classList.add("fade");
-      overviewRef.current.classList.remove("fade");
-      cardsRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest",
-      });
-    }
+    toggleView(cardsRef, overviewRef);
   }
 
   return (
