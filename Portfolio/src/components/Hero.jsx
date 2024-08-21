@@ -70,7 +70,7 @@ export default function Hero() {
 
         {/* Scroll Button */}
         {isAtTop && (
-          <div className="fade-in">
+          <div className="w-full flex justify-center fade-in">
             <FaAnglesDown className="animate-bounce absolute bottom-[50px] size-12 text-white z-40 rounded-full p-2 border-2 border-primary_green" />
           </div>
         )}
