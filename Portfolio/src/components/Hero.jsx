@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-
 import { FaAnglesDown } from "react-icons/fa6";
+
+import TypeWriter from "./TypeWriter";
 
 import "./utils/hero.css";
 import "./utils/button.css";
@@ -37,7 +38,9 @@ export default function Hero() {
           <div className="text-white">Dominik Muranyi</div>
           <div className="flex pl-5 items-center 2xs:-mt-[15px] md:-mt-[30px]">
             <div className="lg:size-[40px] md:size-[30px] 2xs:size-[15px] border-l-2 border-b-2 border-primary_purple 2xs:-mt-[15px] md:-mt-[30px] mr-[10px]" />
-            <div className="text-primary_green">Full-Stack Developer</div>
+            <div className="text-primary_green text-[56px]">
+              <TypeWriter />
+            </div>
           </div>
         </div>
 
