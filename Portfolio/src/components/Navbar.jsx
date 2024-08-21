@@ -115,6 +115,7 @@ export default function Navbar() {
             href="./DominikMuranyiCV.pdf"
             download
             className="resume-border px-20 bg-primary_gray"
+            onClick={() => setShowMenu(false)}
           >
             Resume.
           </a>
