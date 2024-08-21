@@ -30,11 +30,11 @@ export default function AboutMe() {
   return (
     <section id="ABOUT ME" className="relative">
       {/* Background */}
-      {/* <div className="absolute w-full h-full z-0 overflow-hidden">
-        <div className="absolute w-[20%] h-[16%] repeat_purple_dots translate-y-[100px] translate-x-[100px]" />
-        <div className="absolute w-[15%] h-[30%] repeat_purple_dots translate-y-[400px] translate-x-[1400px]" />
-        <div className="absolute w-[10%] h-[20%] repeat_green_dots_1 translate-y-[700px] translate-x-[300px]" />
-      </div> */}
+      <div className="absolute w-full h-full z-0">
+        <div className="absolute xl:w-[20%] lg:h-[16%] md:h-[10%] 2xs:w-[30%] 2xs:h-[10%] repeat_purple_dots md:top-[15%] 2xs:top-[25%] left-[60%]" />
+        <div className="absolute xl:w-[15%] lg:h-[30%] md:h-[20%] 2xs:w-[25%] 2xs:h-[16%] repeat_purple_dots md:top-[40%] 2xs:top-[45%] md:left-[50%] 2xs:left-[60%]" />
+        <div className="absolute xl:w-[10%] lg:h-[20%] md:h-[8%] 2xs:w-[20%] 2xs:h-[8%] repeat_green_dots_1 md:top-[30%] 2xs:top-[35%] md:left-[15%] 2xs:left-[10%]" />
+      </div>
 
       <div className="lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px]">
         {/* Title */}

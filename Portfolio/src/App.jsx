@@ -14,7 +14,7 @@ export default function App() {
       <Navbar />
       {/* <SideBar /> */}
       <Hero />
-      <div className="space-y-[120px]">
+      <div className="lg:space-y-[120px] md:space-y-[200px] 2xs:space-y-[120px]">
         <AboutMe />
         <Projects />
         <Contact />
