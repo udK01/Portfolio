@@ -34,11 +34,11 @@ export default function Hero() {
     <section id="HERO">
       <div className="flex flex-col justify-center items-center w-full 2xs:h-[90vh] lg:h-[100vh] md:space-y-20 2xs:space-y-10">
         {/* Name & Occupation */}
-        <div className="font-robot font-black lg:text-[80px] md:text-[60px] 2xs:text-[30px] z-10 rise-up-0 opacity-0">
+        <div className="font-robot font-black lg:text-[80px] md:text-[60px] 2xs:text-[40px] z-10 rise-up-0 opacity-0">
           <div className="text-white">Dominik Muranyi</div>
           <div className="flex pl-5 items-center 2xs:-mt-[15px] md:-mt-[30px]">
-            <div className="lg:size-[40px] md:size-[30px] 2xs:size-[15px] border-l-2 border-b-2 border-primary_purple 2xs:-mt-[15px] md:-mt-[30px] mr-[10px]" />
-            <div className="text-primary_green text-[56px]">
+            <div className="lg:size-[40px] md:size-[24px] 2xs:size-[15px] border-l-2 border-b-2 border-primary_purple 2xs:-mt-[15px] md:-mt-[20px] mr-[10px]" />
+            <div className="text-primary_green lg:text-[54px] md:text-[40px] 2xs:text-[26px]">
               <TypeWriter />
             </div>
           </div>
