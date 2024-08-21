@@ -79,7 +79,9 @@ export default function Navbar() {
           <div
             className={`resume-border font-robot font-black hover:cursor-pointer text-[20px] hover:text-primary_green transition-colors duration-300 mr-[32px]`}
           >
-            Resume.
+            <a href="./DominikMuranyiCV.pdf" download>
+              Resume.
+            </a>
           </div>
         </div>
         {/* Phone & Tablet */}
@@ -109,7 +111,13 @@ export default function Navbar() {
               {item}
             </p>
           ))}
-          <p className="resume-border px-20 bg-primary_gray">Resume.</p>
+          <a
+            href="./DominikMuranyiCV.pdf"
+            download
+            className="resume-border px-20 bg-primary_gray"
+          >
+            Resume.
+          </a>
         </div>
       )}
     </div>
