@@ -4,11 +4,11 @@ import "./utils/contact.css";
 
 export default function Contact() {
   const inputStyle =
-    "w-[80%] bg-transparent caret-primary_green focus:outline-none text-white font-poppins font-extralight text-[30px] pl-3 border-l-2 border-b-2 border-primary_purple";
+    "w-[80%] bg-transparent caret-primary_green focus:outline-none text-white font-poppins font-extralight lg:text-[30px] md:text-[24px] 2xs:text-[16px] pl-3 border-l-2 border-b-2 border-primary_purple";
 
   return (
     <section id="CONTACT" className="flex flex-col justify-center">
-      <div className="space-y-[150px] z-20">
+      <div className="lg:space-y-[150px] md:space-y-[120px] 2xs:space-y-[60px] z-20">
         {/* Title */}
         <div className="w-full h-full flex justify-center scroll_animate">
           <TextBar text={"CONTACT"} shadow={"top_left_green"} extra={"z-20"} />
@@ -17,7 +17,7 @@ export default function Contact() {
         {/* Form */}
         <div className="flex justify-center z-20">
           <div
-            className="flex flex-col items-center justify-center w-[670px] h-[750px] bg-[#131010] p-5 space-y-[50px]"
+            className="flex flex-col items-center justify-center md:w-[70vh] md:h-[80vh] 2xs:w-[40vh] 2xs:h-[60vh] bg-[#131010] p-5 space-y-[50px]"
             style={{
               boxShadow: "4px 4px 15px 3px #4CFFB4, -4px -4px 15px 3px #9747FF",
             }}
@@ -38,9 +38,9 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="absolute w-full h-full flex justify-center items-center overflow-hidden">
+      <div className="absolute w-full h-full flex justify-center items-center">
         <div className="w-full h-full repeat_green_dots_2 opacity-35" />
-        <div className="w-full h-full radial_gradient" />
+        <div className="w-full h-full radial_gradient3" />
       </div>
     </section>
   );
