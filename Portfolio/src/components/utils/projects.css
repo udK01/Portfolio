@@ -49,7 +49,7 @@
   );
 }
 
-@keyframes fade {
+@keyframes fade1 {
   from {
     opacity: 0.3;
   }
@@ -58,6 +58,6 @@
   }
 }
 
-.fade {
-  animation: fade 1.25s forwards;
+.fade1 {
+  animation: fade1 1.25s forwards;
 }

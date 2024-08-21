@@ -28,8 +28,8 @@ export default function Projects() {
     if (showRef.current && hideRef.current) {
       hideRef.current.classList.toggle("hidden");
       showRef.current.classList.toggle("hidden");
-      showRef.current.classList.add("fade");
-      hideRef.current.classList.remove("fade");
+      showRef.current.classList.add("fade1");
+      hideRef.current.classList.remove("fade1");
       showRef.current.scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -49,7 +49,7 @@ export default function Projects() {
   return (
     <section
       id="PROJECTS"
-      className={`h-full flex flex-col justify-center md:space-y-[80px] 2xs:space-y-[50px]`}
+      className={`h-full flex flex-col justify-center md:space-y-[80px] 2xs:space-y-[50px] z-10`}
     >
       {/* Title */}
       <div className="w-full flex justify-center scroll_animate">
@@ -82,7 +82,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div ref={overviewRef} className="hidden z-10">
+      <div ref={overviewRef} className="hidden z-30">
         <ProjectOverview
           projects={projects}
           selectedProject={selectedProject}
@@ -92,7 +92,7 @@ export default function Projects() {
       </div>
 
       {/* Background Diamonds */}
-      <div className={`w-full h-full absolute flex justify-center`}>
+      <div className={`w-full h-full absolute flex justify-center z-0`}>
         <div className="w-full h-full repeat_diamonds opacity-35" />
         <div className="radial_gradient4" />
       </div>
