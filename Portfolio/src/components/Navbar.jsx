@@ -57,6 +57,22 @@ export default function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setShowMenu(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col">
       <div className="w-full fixed flex items-center bg-primary_gray h-[117px] navbar-move z-40">
