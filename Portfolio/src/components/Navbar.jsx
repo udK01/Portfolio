@@ -53,7 +53,11 @@ export default function Navbar() {
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId.toUpperCase());
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
     }
   };
 

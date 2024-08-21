@@ -55,7 +55,7 @@ export default function Projects() {
   return (
     <section
       id="PROJECTS"
-      className={`h-full flex flex-col justify-center md:space-y-[80px] 2xs:space-y-[60px]`}
+      className={`h-full flex flex-col justify-center md:space-y-[80px] 2xs:space-y-[50px]`}
     >
       {/* Title */}
       <div className="w-full flex justify-center scroll_animate">
