@@ -2,6 +2,13 @@ import "./utils/hero.css";
 import "./utils/button.css";
 
 export default function Hero() {
+  function handleScroll() {
+    const section = document.getElementById("CONTACT");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section id="HERO">
       <div className="flex flex-col justify-center items-center w-full 2xs:h-[90vh] lg:h-[100vh] md:space-y-20 2xs:space-y-10">
@@ -30,6 +37,7 @@ export default function Hero() {
         {/* Get In Touch Button */}
         <div
           className={`gradient-border font-robot font-black hover:cursor-pointer lg:text-[28px] md:text-[20px] 2xs:text-[14px] hover:text-primary_green transition-colors duration-300 rise-up-2 opacity-0`}
+          onClick={() => handleScroll()}
         >
           Get in Touch.
         </div>
