@@ -4,7 +4,7 @@ import "./utils/button.css";
 export default function Hero() {
   return (
     <section id="HERO">
-      <div className="flex flex-col justify-center items-center w-full 2xs:h-[65vh] md:h-[80vh] lg:h-[100vh] md:space-y-20 2xs:space-y-10">
+      <div className="flex flex-col justify-center items-center w-full 2xs:h-[90vh] lg:h-[100vh] md:space-y-20 2xs:space-y-10">
         {/* Name & Occupation */}
         <div className="font-robot font-black lg:text-[80px] md:text-[60px] 2xs:text-[30px] z-10 rise-up-0 opacity-0">
           <div className="text-white">Dominik Muranyi</div>
