@@ -6,6 +6,7 @@ export default function ProjectOverview({
   projects,
   selectedProject,
   setSelectedProject,
+  changeToCards,
 }) {
   const filteredProjects = [...projects].filter(
     (p) => p.src !== selectedProject.src
@@ -296,7 +297,13 @@ export default function ProjectOverview({
               </div>
               <div
                 className="md:size-[50px] 2xs:size-[30px] border-2 border-primary_purple rounded-full flex justify-center items-center transition-colors duration-300 hover:bg-primary_purple hover:cursor-pointer"
-                onClick={() => setSelectedProject(null)}
+                onClick={() => {
+                  setSelectedProject({
+                    id: 1,
+                    src: "./Projects/project1.png",
+                  });
+                  changeToCards();
+                }}
               >
                 <IoMdClose className="size-[30px] text-white" />
               </div>
