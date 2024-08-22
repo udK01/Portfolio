@@ -27,17 +27,25 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-      .then(() => {
-        alert(`Email Sent!`);
-        setName("");
-        setEmail("");
-        setMessage("");
-      })
-      .catch((error) => {
-        console.error(`Failed to send message:`, error);
-      });
+    const warning = document.getElementById("warning");
+
+    warning.classList.add("hidden");
+
+    if (name.length > 0 && email.length > 0 && message.length > 0) {
+      emailjs
+        .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+        .then(() => {
+          alert(`Email Sent!`);
+          setName("");
+          setEmail("");
+          setMessage("");
+        })
+        .catch((error) => {
+          console.error(`Failed to send message:`, error);
+        });
+    } else {
+      warning.classList.remove("hidden");
+    }
   };
 
   const inputStyle =
@@ -84,6 +92,9 @@ export default function Contact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
+            <span id="warning" className="text-red-500 hidden">
+              You must fill out every field!
+            </span>
 
             <button
               type="submit"
