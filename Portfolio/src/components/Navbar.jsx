@@ -82,7 +82,16 @@ export default function Navbar() {
       <div className="w-full fixed flex items-center bg-primary_gray h-[117px] navbar-move z-40">
         {/* Laptop & Desktop */}
         <div className="justify-between w-full items-center 2xs:hidden lg:flex">
-          <img src="./logo.png" className="w-[108px] h-[64px] ml-[32px]" />
+          <img
+            src="./logo.png"
+            className="w-[108px] h-[64px] ml-[32px] hover:cursor-pointer"
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
+          />
           <div className="flex text-[#7E7E7E] font-medium gap-20 font-poppins text-[25px]">
             {menuItems.map((item, index) => (
               <p
@@ -106,7 +115,16 @@ export default function Navbar() {
         </div>
         {/* Phone & Tablet */}
         <div className="justify-between w-full items-center 2xs:flex lg:hidden">
-          <img src="./logo.png" className="w-[108px] h-[64px] mx-[32px]" />
+          <img
+            src="./logo.png"
+            className="w-[108px] h-[64px] mx-[32px]"
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
+          />
           <div className="flex flex-col items-center">
             <FiAlignJustify
               size={48}
