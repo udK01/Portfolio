@@ -23,8 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Videos
-*.mp4
-
 # Environment Files.
 *.env
