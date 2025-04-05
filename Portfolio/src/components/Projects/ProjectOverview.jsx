@@ -2,6 +2,8 @@ import { IoMdClose } from "react-icons/io";
 
 import ProjectSlider from "./ProjectSlider";
 
+import { FaGithub } from "react-icons/fa";
+
 export default function ProjectOverview({
   projects,
   selectedProject,
@@ -55,6 +57,7 @@ export default function ProjectOverview({
           position: 6,
         },
       ],
+      github: "https://github.com/udK01/webapps-cw1",
       video: "./Videos/project1.mp4",
     },
     {
@@ -87,6 +90,7 @@ export default function ProjectOverview({
           position: 4,
         },
       ],
+      github: "https://github.com/udK01/GameDevProject",
       video: "./Videos/project2.mp4",
     },
     {
@@ -137,6 +141,7 @@ export default function ProjectOverview({
           position: 7,
         },
       ],
+      github: "https://github.com/udK01/IncomeExpenseApp",
       video: "./Videos/project3.mp4",
     },
     {
@@ -205,6 +210,7 @@ export default function ProjectOverview({
           position: 10,
         },
       ],
+      github: "https://github.com/udK01/MangaSite",
       video: "./Videos/project4.mp4",
     },
     {
@@ -255,7 +261,98 @@ export default function ProjectOverview({
           position: 7,
         },
       ],
+      github: "https://github.com/udK01/ScrollAnimateProject",
       video: "./Videos/project5.mp4",
+    },
+    {
+      id: 6,
+      title: "Chatroom Site",
+      desc: "This project was a simple WebSocket-based chatroom designed to explore real-time communication. It helped me understand persistent connections, message broadcasting, and basic MongoDB integration.",
+      tools: [
+        {
+          icon: "./Icons/Html.png",
+          text: "HTML",
+          colour: "green",
+          position: 1,
+        },
+        {
+          icon: "./Icons/Js.png",
+          text: "Javascript",
+          colour: "purple",
+          position: 2,
+        },
+        {
+          icon: "./Icons/VsCode.png",
+          text: "VsCode",
+          colour: "green",
+          position: 3,
+        },
+        {
+          icon: "./Icons/Github.png",
+          text: "GitHub",
+          colour: "purple",
+          position: 4,
+        },
+        {
+          icon: "./Icons/React.png",
+          text: "React",
+          colour: "green",
+          position: 5,
+        },
+        {
+          icon: "./Icons/Tailwind.png",
+          text: "Tailwind",
+          colour: "purple",
+          position: 6,
+        },
+      ],
+      github: "https://github.com/udK01/Web-Socket-Learning",
+      video: "./Videos/project6.mp4",
+    },
+    {
+      id: 7,
+      title: "Social Dice Café",
+      desc: "In this project, I redesigned the website for a board game café I regularly visit with friends. I crafted a fresh, engaging look with custom animations, focusing on an inviting user experience. The site was built primarily using React and Tailwind CSS.",
+      tools: [
+        {
+          icon: "./Icons/Html.png",
+          text: "HTML",
+          colour: "green",
+          position: 1,
+        },
+        {
+          icon: "./Icons/Js.png",
+          text: "Javascript",
+          colour: "purple",
+          position: 2,
+        },
+        {
+          icon: "./Icons/VsCode.png",
+          text: "VsCode",
+          colour: "green",
+          position: 3,
+        },
+        {
+          icon: "./Icons/Github.png",
+          text: "GitHub",
+          colour: "purple",
+          position: 4,
+        },
+        {
+          icon: "./Icons/React.png",
+          text: "React",
+          colour: "green",
+          position: 5,
+        },
+        {
+          icon: "./Icons/Tailwind.png",
+          text: "Tailwind",
+          colour: "purple",
+          position: 6,
+        },
+      ],
+      github: "https://github.com/udK01/SocialDiceSite",
+      video: "./Projects/project7.png",
     },
   ];
 
@@ -266,11 +363,11 @@ export default function ProjectOverview({
   return (
     <div className="w-full flex justify-center md:gap-10 2xs:gap-3 z-10">
       {/* Projects Sidebar */}
-      <div className="flex flex-col space-y-[20px]">
+      <div className="flex flex-col space-y-[20px] max-h-[660px] overflow-y-auto scrollbar-hide">
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="lg:size-[150px] md:size-[130px] 2xs:size-[100px] hover:cursor-pointer transition-colors duration-500 border-2 border-primary_purple hover:border-primary_green"
+            className="flex flex-shrink-0 lg:size-[150px] md:size-[130px] 2xs:size-[100px] hover:cursor-pointer transition-colors duration-500 border-2 border-primary_purple hover:border-primary_green"
             onClick={() => setSelectedProject(project)}
           >
             <img
@@ -292,9 +389,15 @@ export default function ProjectOverview({
           <div className="flex flex-col space-y-[18px] 2xs:h-full md:justify-normal 2xs:justify-between md:pb-0 2xs:pb-4">
             {/* Title and Close Button */}
             <div className="w-full flex justify-between items-center">
-              <div className="font-black font-robot lg:text-[50px] md:text-[40px] 2xs:text-[24px] text-white">
+              <div className="font-black font-robot lg:text-[50px] md:text-[40px] 2xs:text-[24px] text-white line-clamp-1">
                 {selectedInfo[0].title}
               </div>
+              <a
+                href={selectedInfo[0].github}
+                className="md:size-[50px] 2xs:size-[30px] border-2 border-primary_purple rounded-full flex justify-center items-center transition-colors duration-300 hover:bg-primary_purple hover:cursor-pointer"
+              >
+                <FaGithub className="size-[30px] text-white" />
+              </a>
               <div
                 className="md:size-[50px] 2xs:size-[30px] border-2 border-primary_purple rounded-full flex justify-center items-center transition-colors duration-300 hover:bg-primary_purple hover:cursor-pointer"
                 onClick={() => {
