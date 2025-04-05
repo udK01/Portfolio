@@ -1,5 +1,4 @@
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import ProjectOverview from "./ProjectOverview";
 import ProjectCard from "./ProjectCard";
@@ -14,6 +13,8 @@ export default function Projects() {
     { id: 3, src: "./Projects/project3.png" },
     { id: 4, src: "./Projects/project4.png" },
     { id: 5, src: "./Projects/project5.png" },
+    { id: 6, src: "./Projects/project6.png" },
+    { id: 7, src: "./Projects/project7.png" },
   ];
 
   const [selectedProject, setSelectedProject] = useState({
