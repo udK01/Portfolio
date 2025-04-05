@@ -312,7 +312,7 @@ export default function ProjectOverview({
     {
       id: 7,
       title: "Social Dice Café",
-      desc: "In this project, I redesigned the website for a board game café I regularly visit with friends. I crafted a fresh, engaging look with custom animations, focusing on an inviting user experience. The site was built primarily using React and Tailwind CSS.",
+      desc: "In this project, I redesigned the website for a board game café I regularly visit with friends. I crafted a fresh, engaging look with custom animations, focusing on an inviting user experience.",
       tools: [
         {
           icon: "./Icons/Html.png",
@@ -352,7 +352,9 @@ export default function ProjectOverview({
         },
       ],
       github: "https://github.com/udK01/SocialDiceSite",
-      video: "./Projects/project7.png",
+      video: "",
+      link: "https://socialdice.netlify.app/",
+      image: "./Projects/project7.png",
     },
   ];
 
@@ -363,7 +365,7 @@ export default function ProjectOverview({
   return (
     <div className="w-full flex justify-center md:gap-10 2xs:gap-3 z-10">
       {/* Projects Sidebar */}
-      <div className="flex flex-col space-y-[20px] max-h-[660px] overflow-y-auto scrollbar-hide">
+      <div className="flex flex-col space-y-[20px] lg:max-h-[660px] md:max-h-[620px] 2xs:max-h-[500px] overflow-y-auto scrollbar-hide">
         {filteredProjects.map((project) => (
           <div
             key={project.id}
@@ -378,7 +380,7 @@ export default function ProjectOverview({
         ))}
       </div>
       {/* Select Project Image */}
-      <div className="w-[350px] h-[660px] 2xs:hidden xl:block">
+      <div className="w-[350px] h-[660px] 2xs:hidden xl:block ">
         <img
           src={selectedProject.src}
           className="relative w-full h-full object-cover border-2 border-primary_purple"
@@ -425,11 +427,37 @@ export default function ProjectOverview({
           </div>
 
           {/* Video */}
+
           <div className="border-2 border-primary_purple">
-            <video key={selectedInfo[0].id} className="w-full h-full" controls>
-              <source src={selectedInfo[0].video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {selectedInfo[0].video ? (
+              <video
+                key={selectedInfo[0].id}
+                className="w-full h-full"
+                controls
+              >
+                <source src={selectedInfo[0].video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <div className="relative w-full h-full">
+                <img
+                  src={selectedInfo[0].image}
+                  className="w-full h-full brightness-50"
+                />
+                <div className="absolute w-full h-full top-0">
+                  <div className="h-full flex justify-center items-center">
+                    <a
+                      href={selectedInfo[0].link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-robot text-[24px] text-white hover:text-primary_purple hover:underline hover:cursor-pointer transition-all duration-200"
+                    >
+                      Click To Visit.
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
